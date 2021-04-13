@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "components.css",
+  "sources": [
+    "../src/components/Modal.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\nimport { onMount } from 'svelte';\n\nfunction toggleModal () {\n\tconst modal = document.querySelector('.modal')\n\tmodal.classList.toggle('opacity-0')\n\tmodal.classList.toggle('pointer-events-none')\n};\n\nonMount(() => {\n\tconst overlay = document.querySelector('.modal-overlay');\n\toverlay.addEventListener('click', toggleModal);\n});\n</script>\n\n<style>.modal{-webkit-transition:opacity .25s ease;transition:opacity .25s ease}\n/*# sourceMappingURL=src/components/Modal.svelte.map */</style>\n\n<svelte:window on:load={toggleModal} />\n\n<div class=\"modal opacity-0 pointer-events-none absolute w-full h-full top-0 left-0 flex items-center justify-center\">\n  <div class=\"modal-overlay absolute w-full h-full bg-black opacity-25 top-0 left-0 cursor-pointer\"></div>\n  <div class=\"absolute w-1/2 h-32 bg-white rounded-sm shadow-lg flex items-center justify-center text-2xl\">🚀</div>\n</div>\n"
+  ],
+  "names": [],
+  "mappings": "AAeO,qBAAM,CAAC,mBAAmB,OAAO,CAAC,IAAI,CAAC,IAAI,CAAC,WAAW,OAAO,CAAC,IAAI,CAAC,IAAI,CAAC"
+}
