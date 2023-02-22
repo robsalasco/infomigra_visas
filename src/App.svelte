@@ -8,7 +8,6 @@ import Vc from './pages/Vc.svelte';
 import Pt from './pages/Pt.svelte';
 import Ss from './pages/Ss.svelte';
 import Nc from './pages/Nc.svelte';
-import Pd from './pages/Pd.svelte';
 import Rc from './pages/Rc.svelte';
 
 </script>
