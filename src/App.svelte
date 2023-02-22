@@ -26,6 +26,5 @@ import Rc from './pages/Rc.svelte';
   <Route exact path="/pt" component={Pt} />
   <Route exact path="/ss" component={Ss} />
   <Route exact path="/nc" component={Nc} />
-  <Route exact path="/pd" component={Pd} />
   <Route exact path="/rc" component={Rc} />
 </Router>
