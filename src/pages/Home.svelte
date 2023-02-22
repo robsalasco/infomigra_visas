@@ -10,7 +10,6 @@
     { path: '/pt', name: `Valor de permisos de trabajo según país de origen` },
     { path: '/ss', name: `Valor de la sanciones según cantidad de días y forma de presentación` },
     { path: '/nc', name: `Definitiva y nacionalización` },
-    { path: '/pd', name: `Valores de tramites y documentos PDI` },
     { path: '/rc', name: `Valores de trámites y documentos Registro Civil Chileno` }
   ];
 
