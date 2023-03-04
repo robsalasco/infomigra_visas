@@ -1,6 +1,6 @@
 <script>
   
-  import { navigateTo } from 'svero';
+  import { navigateTo } from 'yrv';
 
   let page;
 

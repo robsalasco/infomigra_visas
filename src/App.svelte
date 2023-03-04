@@ -1,5 +1,5 @@
 <script>
-import {Router, Route, Link} from 'svero';
+import {Router, Route, Link} from 'yrv';
 import Modal from './components/Modal.svelte'; 
 import Nav from './components/Nav.svelte';
 import Home from './pages/Home.svelte';
@@ -19,7 +19,6 @@ import Rc from './pages/Rc.svelte';
 <Nav />
 
 <Router>
-  <Route path="*" component={Home} />
   <Route exact path="/" component={Home} />
   <Route exact path="/vs" component={Vs} />
   <Route exact path="/vc" component={Vc} />
