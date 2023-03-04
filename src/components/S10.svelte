@@ -17,18 +17,18 @@
     <tr class="bg-white">
       <td class="border px-4 py-2">Tramo 1</td>
       <td class="border px-4 py-2">Antes de 5 días</td>
-      <td class="border px-4 py-2">0.25</td>
-      <td class="border px-4 py-2">0.38</td>
-      <td class="border px-4 py-2">2.5</td>
-      <td class="border px-4 py-2">3.8</td>
+      <td class="border px-4 py-2">30</td>
+      <td class="border px-4 py-2">45</td>
+      <td class="border px-4 py-2">100</td>
+      <td class="border px-4 py-2">150</td>
     </tr>
     <tr class="bg-gray-100">
       <td class="border px-4 py-2">Tramo 2</td>
       <td class="border px-4 py-2">Despúes de 5 días</td>
-      <td class="border px-4 py-2">0.25</td>
-      <td class="border px-4 py-2">0.5</td>
-      <td class="border px-4 py-2">2.5</td>
-      <td class="border px-4 py-2">5</td>
+      <td class="border px-4 py-2">30</td>
+      <td class="border px-4 py-2">60</td>
+      <td class="border px-4 py-2">100</td>
+      <td class="border px-4 py-2">200</td>
     </tr>
   </tbody>
 </table>

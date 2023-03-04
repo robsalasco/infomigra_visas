@@ -1962,7 +1962,7 @@
     	return child_ctx;
     }
 
-    // (36:10) {#each questions as question}
+    // (35:10) {#each questions as question}
     function create_each_block(ctx) {
     	var option, t0_value = ctx.question.name + "", t0, t1;
 
@@ -1973,7 +1973,7 @@
     			t1 = space();
     			option.__value = ctx.question;
     			option.value = option.__value;
-    			add_location(option, file$3, 36, 10, 1380);
+    			add_location(option, file$3, 35, 10, 1313);
     		},
 
     		m: function mount(target, anchor) {
@@ -1990,7 +1990,7 @@
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(36:10) {#each questions as question}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(35:10) {#each questions as question}", ctx });
     	return block;
     }
 
@@ -2028,29 +2028,29 @@
     			button = element("button");
     			button.textContent = "Seleccionar";
     			attr_dev(h2, "class", "text-lg text-black");
-    			add_location(h2, file$3, 31, 4, 943);
+    			add_location(h2, file$3, 30, 4, 876);
     			if (ctx.page === void 0) add_render_callback(() => ctx.select_change_handler.call(select));
     			attr_dev(select, "class", "block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline");
-    			add_location(select, file$3, 34, 8, 1128);
+    			add_location(select, file$3, 33, 8, 1061);
     			attr_dev(path, "d", "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z");
-    			add_location(path, file$3, 42, 99, 1695);
+    			add_location(path, file$3, 41, 99, 1628);
     			attr_dev(svg, "class", "fill-current h-4 w-4");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "viewBox", "0 0 20 20");
-    			add_location(svg, file$3, 42, 10, 1606);
+    			add_location(svg, file$3, 41, 10, 1539);
     			attr_dev(div0, "class", "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700");
-    			add_location(div0, file$3, 41, 8, 1498);
+    			add_location(div0, file$3, 40, 8, 1431);
     			attr_dev(div1, "class", "inline-block relative w-12/12");
-    			add_location(div1, file$3, 33, 6, 1076);
+    			add_location(div1, file$3, 32, 6, 1009);
     			attr_dev(button, "class", "flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded mt-4");
     			attr_dev(button, "type", "submit");
-    			add_location(button, file$3, 45, 6, 1822);
+    			add_location(button, file$3, 44, 6, 1755);
     			attr_dev(form, "class", "mt-4");
-    			add_location(form, file$3, 32, 4, 1010);
+    			add_location(form, file$3, 31, 4, 943);
     			attr_dev(div2, "class", "block relative bg-white shadow-md rounded px-8 pb-8 mb-4 w-12/12");
-    			add_location(div2, file$3, 29, 2, 859);
+    			add_location(div2, file$3, 28, 2, 792);
     			attr_dev(div3, "class", "container mx-auto h-full flex justify-center items-center");
-    			add_location(div3, file$3, 27, 0, 784);
+    			add_location(div3, file$3, 26, 0, 717);
 
     			dispose = [
     				listen_dev(select, "change", ctx.select_change_handler),
@@ -2137,7 +2137,6 @@
         { path: '/pt', name: `Valor de permisos de trabajo según país de origen` },
         { path: '/ss', name: `Valor de la sanciones según cantidad de días y forma de presentación` },
         { path: '/nc', name: `Definitiva y nacionalización` },
-        { path: '/pd', name: `Valores de tramites y documentos PDI` },
         { path: '/rc', name: `Valores de trámites y documentos Registro Civil Chileno` }
       ];
 
@@ -7301,7 +7300,7 @@
     const file$7 = "src/components/S1.svelte";
 
     function create_fragment$8(ctx) {
-    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, tbody, tr1, td0, t11, td1, t13, td2, t15, td3, t17, td4, t19, tr2, td5, t21, td6, t23, td7, t25, td8, t27, td9, t29, tr3, td10, t31, td11, t33, td12, t35, td13, t37, td14, t39, tr4, td15, t41, td16, t43, td17, t45, td18, t47, td19;
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
 
     	const block = {
     		c: function create() {
@@ -7309,145 +7308,104 @@
     			thead = element("thead");
     			tr0 = element("tr");
     			th0 = element("th");
-    			th0.textContent = "Días";
+    			th0.textContent = "Tramo";
     			t1 = space();
     			th1 = element("th");
-    			th1.textContent = "Presentación voluntaria";
+    			th1.textContent = "Días";
     			t3 = space();
     			th2 = element("th");
-    			th2.textContent = "Denuncia polin";
+    			th2.textContent = "Presentación voluntaria";
     			t5 = space();
     			th3 = element("th");
-    			th3.textContent = "Reincidencia presentación voluntaria";
+    			th3.textContent = "Denuncia PDI";
     			t7 = space();
     			th4 = element("th");
-    			th4.textContent = "Reincidencia denuncia polin";
+    			th4.textContent = "Reincidencia presentación voluntaria";
     			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Reincidencia denuncia PDI";
+    			t11 = space();
     			tbody = element("tbody");
     			tr1 = element("tr");
     			td0 = element("td");
-    			td0.textContent = "1 a 100";
-    			t11 = space();
-    			td1 = element("td");
-    			td1.textContent = "$ 40.871";
+    			td0.textContent = "Tramo 1";
     			t13 = space();
-    			td2 = element("td");
-    			td2.textContent = "$ 53.876";
+    			td1 = element("td");
+    			td1.textContent = "Antes de 5 días";
     			t15 = space();
-    			td3 = element("td");
-    			td3.textContent = "$ 68.738";
+    			td2 = element("td");
+    			td2.textContent = "0.25";
     			t17 = space();
-    			td4 = element("td");
-    			td4.textContent = "$ 104.036";
+    			td3 = element("td");
+    			td3.textContent = "0.38";
     			t19 = space();
-    			tr2 = element("tr");
-    			td5 = element("td");
-    			td5.textContent = "101 a 190";
+    			td4 = element("td");
+    			td4.textContent = "1";
     			t21 = space();
-    			td6 = element("td");
-    			td6.textContent = "$ 53.876";
+    			td5 = element("td");
+    			td5.textContent = "1.5";
     			t23 = space();
-    			td7 = element("td");
-    			td7.textContent = "$ 68.738";
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			td6.textContent = "Tramo 2";
     			t25 = space();
-    			td8 = element("td");
-    			td8.textContent = "$ 89.173";
+    			td7 = element("td");
+    			td7.textContent = "Despúes de 5 días";
     			t27 = space();
-    			td9 = element("td");
-    			td9.textContent = "$ 135.618";
+    			td8 = element("td");
+    			td8.textContent = "0.25";
     			t29 = space();
-    			tr3 = element("tr");
-    			td10 = element("td");
-    			td10.textContent = "191 a 375";
+    			td9 = element("td");
+    			td9.textContent = "0.5";
     			t31 = space();
-    			td11 = element("td");
-    			td11.textContent = "$ 68.738";
+    			td10 = element("td");
+    			td10.textContent = "1";
     			t33 = space();
-    			td12 = element("td");
-    			td12.textContent = "$ 89.173";
-    			t35 = space();
-    			td13 = element("td");
-    			td13.textContent = "$ 117.040";
-    			t37 = space();
-    			td14 = element("td");
-    			td14.textContent = "$ 174.631";
-    			t39 = space();
-    			tr4 = element("tr");
-    			td15 = element("td");
-    			td15.textContent = "376 y más";
-    			t41 = space();
-    			td16 = element("td");
-    			td16.textContent = "$ 89.173";
-    			t43 = space();
-    			td17 = element("td");
-    			td17.textContent = "$ 117.040";
-    			t45 = space();
-    			td18 = element("td");
-    			td18.textContent = "$ 152.338";
-    			t47 = space();
-    			td19 = element("td");
-    			td19.textContent = "$ 228.507";
+    			td11 = element("td");
+    			td11.textContent = "2";
     			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
     			add_location(th0, file$7, 7, 6, 86);
-    			attr_dev(th1, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th1, file$7, 8, 6, 201);
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th1, file$7, 8, 6, 202);
     			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th2, file$7, 9, 6, 335);
+    			add_location(th2, file$7, 9, 6, 317);
     			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th3, file$7, 10, 6, 460);
+    			add_location(th3, file$7, 10, 6, 451);
     			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th4, file$7, 11, 6, 607);
+    			add_location(th4, file$7, 11, 6, 574);
+    			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th5, file$7, 12, 6, 721);
     			add_location(tr0, file$7, 6, 4, 75);
     			add_location(thead, file$7, 5, 2, 63);
     			attr_dev(td0, "class", "border px-4 py-2");
-    			add_location(td0, file$7, 16, 6, 802);
+    			add_location(td0, file$7, 17, 6, 914);
     			attr_dev(td1, "class", "border px-4 py-2");
-    			add_location(td1, file$7, 17, 6, 850);
+    			add_location(td1, file$7, 18, 6, 962);
     			attr_dev(td2, "class", "border px-4 py-2");
-    			add_location(td2, file$7, 18, 6, 899);
+    			add_location(td2, file$7, 19, 6, 1018);
     			attr_dev(td3, "class", "border px-4 py-2");
-    			add_location(td3, file$7, 19, 6, 948);
+    			add_location(td3, file$7, 20, 6, 1063);
     			attr_dev(td4, "class", "border px-4 py-2");
-    			add_location(td4, file$7, 20, 6, 997);
-    			attr_dev(tr1, "class", "bg-white");
-    			add_location(tr1, file$7, 15, 4, 774);
+    			add_location(td4, file$7, 21, 6, 1108);
     			attr_dev(td5, "class", "border px-4 py-2");
-    			add_location(td5, file$7, 23, 6, 1086);
+    			add_location(td5, file$7, 22, 6, 1150);
+    			attr_dev(tr1, "class", "bg-white");
+    			add_location(tr1, file$7, 16, 4, 886);
     			attr_dev(td6, "class", "border px-4 py-2");
-    			add_location(td6, file$7, 24, 6, 1136);
+    			add_location(td6, file$7, 25, 6, 1233);
     			attr_dev(td7, "class", "border px-4 py-2");
-    			add_location(td7, file$7, 25, 6, 1185);
+    			add_location(td7, file$7, 26, 6, 1281);
     			attr_dev(td8, "class", "border px-4 py-2");
-    			add_location(td8, file$7, 26, 6, 1234);
+    			add_location(td8, file$7, 27, 6, 1339);
     			attr_dev(td9, "class", "border px-4 py-2");
-    			add_location(td9, file$7, 27, 6, 1283);
-    			attr_dev(tr2, "class", "bg-gray-100");
-    			add_location(tr2, file$7, 22, 4, 1055);
+    			add_location(td9, file$7, 28, 6, 1384);
     			attr_dev(td10, "class", "border px-4 py-2");
-    			add_location(td10, file$7, 30, 6, 1369);
+    			add_location(td10, file$7, 29, 6, 1428);
     			attr_dev(td11, "class", "border px-4 py-2");
-    			add_location(td11, file$7, 31, 6, 1419);
-    			attr_dev(td12, "class", "border px-4 py-2");
-    			add_location(td12, file$7, 32, 6, 1468);
-    			attr_dev(td13, "class", "border px-4 py-2");
-    			add_location(td13, file$7, 33, 6, 1517);
-    			attr_dev(td14, "class", "border px-4 py-2");
-    			add_location(td14, file$7, 34, 6, 1567);
-    			attr_dev(tr3, "class", "bg-white");
-    			add_location(tr3, file$7, 29, 4, 1341);
-    			attr_dev(td15, "class", "border px-4 py-2");
-    			add_location(td15, file$7, 37, 6, 1653);
-    			attr_dev(td16, "class", "border px-4 py-2");
-    			add_location(td16, file$7, 38, 6, 1703);
-    			attr_dev(td17, "class", "border px-4 py-2");
-    			add_location(td17, file$7, 39, 6, 1752);
-    			attr_dev(td18, "class", "border px-4 py-2");
-    			add_location(td18, file$7, 40, 6, 1802);
-    			attr_dev(td19, "class", "border px-4 py-2");
-    			add_location(td19, file$7, 41, 6, 1852);
-    			attr_dev(tr4, "class", "bg-white");
-    			add_location(tr4, file$7, 36, 4, 1625);
-    			add_location(tbody, file$7, 14, 2, 762);
+    			add_location(td11, file$7, 30, 6, 1470);
+    			attr_dev(tr2, "class", "bg-gray-100");
+    			add_location(tr2, file$7, 24, 4, 1202);
+    			add_location(tbody, file$7, 15, 2, 874);
     			attr_dev(table, "class", "table-fixed my-6 w-full");
     			add_location(table, file$7, 4, 0, 21);
     		},
@@ -7469,51 +7427,35 @@
     			append_dev(tr0, th3);
     			append_dev(tr0, t7);
     			append_dev(tr0, th4);
-    			append_dev(table, t9);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(table, t11);
     			append_dev(table, tbody);
     			append_dev(tbody, tr1);
     			append_dev(tr1, td0);
-    			append_dev(tr1, t11);
-    			append_dev(tr1, td1);
     			append_dev(tr1, t13);
-    			append_dev(tr1, td2);
+    			append_dev(tr1, td1);
     			append_dev(tr1, t15);
-    			append_dev(tr1, td3);
+    			append_dev(tr1, td2);
     			append_dev(tr1, t17);
+    			append_dev(tr1, td3);
+    			append_dev(tr1, t19);
     			append_dev(tr1, td4);
-    			append_dev(tbody, t19);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td5);
+    			append_dev(tbody, t23);
     			append_dev(tbody, tr2);
-    			append_dev(tr2, td5);
-    			append_dev(tr2, t21);
     			append_dev(tr2, td6);
-    			append_dev(tr2, t23);
-    			append_dev(tr2, td7);
     			append_dev(tr2, t25);
-    			append_dev(tr2, td8);
+    			append_dev(tr2, td7);
     			append_dev(tr2, t27);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t29);
     			append_dev(tr2, td9);
-    			append_dev(tbody, t29);
-    			append_dev(tbody, tr3);
-    			append_dev(tr3, td10);
-    			append_dev(tr3, t31);
-    			append_dev(tr3, td11);
-    			append_dev(tr3, t33);
-    			append_dev(tr3, td12);
-    			append_dev(tr3, t35);
-    			append_dev(tr3, td13);
-    			append_dev(tr3, t37);
-    			append_dev(tr3, td14);
-    			append_dev(tbody, t39);
-    			append_dev(tbody, tr4);
-    			append_dev(tr4, td15);
-    			append_dev(tr4, t41);
-    			append_dev(tr4, td16);
-    			append_dev(tr4, t43);
-    			append_dev(tr4, td17);
-    			append_dev(tr4, t45);
-    			append_dev(tr4, td18);
-    			append_dev(tr4, t47);
-    			append_dev(tr4, td19);
+    			append_dev(tr2, t31);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t33);
+    			append_dev(tr2, td11);
     		},
 
     		p: noop,
@@ -7543,7 +7485,7 @@
     const file$8 = "src/components/S2.svelte";
 
     function create_fragment$9(ctx) {
-    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11, t35, tr3, td12, t37, td13, t39, td14, t41, td15, t43, td16, t45, td17, t47, tr4, td18, t49, td19, t51, td20, t53, td21, t55, td22, t57, td23;
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
 
     	const block = {
     		c: function create() {
@@ -7560,13 +7502,13 @@
     			th2.textContent = "Presentación voluntaria";
     			t5 = space();
     			th3 = element("th");
-    			th3.textContent = "Denuncia Polin";
+    			th3.textContent = "Denuncia PDI";
     			t7 = space();
     			th4 = element("th");
     			th4.textContent = "Reincidencia presentación voluntaria";
     			t9 = space();
     			th5 = element("th");
-    			th5.textContent = "Reincidencia denuncia polin";
+    			th5.textContent = "Reincidencia denuncia PDI";
     			t11 = space();
     			tbody = element("tbody");
     			tr1 = element("tr");
@@ -7574,147 +7516,81 @@
     			td0.textContent = "Tramo 1";
     			t13 = space();
     			td1 = element("td");
-    			td1.textContent = "1 a 100";
+    			td1.textContent = "Antes de 5 días";
     			t15 = space();
     			td2 = element("td");
-    			td2.textContent = "$ 40.871";
+    			td2.textContent = "0.25";
     			t17 = space();
     			td3 = element("td");
-    			td3.textContent = "$ 61.307";
+    			td3.textContent = "0.38";
     			t19 = space();
     			td4 = element("td");
-    			td4.textContent = "$ 81.742";
+    			td4.textContent = "5";
     			t21 = space();
     			td5 = element("td");
-    			td5.textContent = "$ 122.613";
+    			td5.textContent = "7.5";
     			t23 = space();
     			tr2 = element("tr");
     			td6 = element("td");
     			td6.textContent = "Tramo 2";
     			t25 = space();
     			td7 = element("td");
-    			td7.textContent = "101 a 190";
+    			td7.textContent = "Despúes de 5 días";
     			t27 = space();
     			td8 = element("td");
-    			td8.textContent = "$ 61.307";
+    			td8.textContent = "0.25";
     			t29 = space();
     			td9 = element("td");
-    			td9.textContent = "$ 92.889";
+    			td9.textContent = "0.5";
     			t31 = space();
     			td10 = element("td");
-    			td10.textContent = "$ 122.613";
+    			td10.textContent = "5";
     			t33 = space();
     			td11 = element("td");
-    			td11.textContent = "$ 183.920";
-    			t35 = space();
-    			tr3 = element("tr");
-    			td12 = element("td");
-    			td12.textContent = "Tramo 3";
-    			t37 = space();
-    			td13 = element("td");
-    			td13.textContent = "191 a 375";
-    			t39 = space();
-    			td14 = element("td");
-    			td14.textContent = "$ 92.889";
-    			t41 = space();
-    			td15 = element("td");
-    			td15.textContent = "$ 137.476";
-    			t43 = space();
-    			td16 = element("td");
-    			td16.textContent = "$ 183.920";
-    			t45 = space();
-    			td17 = element("td");
-    			td17.textContent = "$ 276.809";
-    			t47 = space();
-    			tr4 = element("tr");
-    			td18 = element("td");
-    			td18.textContent = "Tramo 4";
-    			t49 = space();
-    			td19 = element("td");
-    			td19.textContent = "376 y más";
-    			t51 = space();
-    			td20 = element("td");
-    			td20.textContent = "$ 137.476";
-    			t53 = space();
-    			td21 = element("td");
-    			td21.textContent = "$ 206.214";
-    			t55 = space();
-    			td22 = element("td");
-    			td22.textContent = "$ 276.809";
-    			t57 = space();
-    			td23 = element("td");
-    			td23.textContent = "$ 414.285";
-    			attr_dev(th0, "class", "w-1/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			td11.textContent = "10";
+    			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
     			add_location(th0, file$8, 7, 6, 86);
-    			attr_dev(th1, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
     			add_location(th1, file$8, 8, 6, 202);
     			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
     			add_location(th2, file$8, 9, 6, 317);
     			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
     			add_location(th3, file$8, 10, 6, 451);
     			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th4, file$8, 11, 6, 576);
+    			add_location(th4, file$8, 11, 6, 574);
     			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th5, file$8, 12, 6, 723);
+    			add_location(th5, file$8, 12, 6, 721);
     			add_location(tr0, file$8, 6, 4, 75);
     			add_location(thead, file$8, 5, 2, 63);
     			attr_dev(td0, "class", "border px-4 py-2");
-    			add_location(td0, file$8, 17, 6, 918);
+    			add_location(td0, file$8, 17, 6, 914);
     			attr_dev(td1, "class", "border px-4 py-2");
-    			add_location(td1, file$8, 18, 6, 966);
+    			add_location(td1, file$8, 18, 6, 962);
     			attr_dev(td2, "class", "border px-4 py-2");
-    			add_location(td2, file$8, 19, 6, 1014);
+    			add_location(td2, file$8, 19, 6, 1018);
     			attr_dev(td3, "class", "border px-4 py-2");
     			add_location(td3, file$8, 20, 6, 1063);
     			attr_dev(td4, "class", "border px-4 py-2");
-    			add_location(td4, file$8, 21, 6, 1112);
+    			add_location(td4, file$8, 21, 6, 1108);
     			attr_dev(td5, "class", "border px-4 py-2");
-    			add_location(td5, file$8, 22, 6, 1161);
+    			add_location(td5, file$8, 22, 6, 1150);
     			attr_dev(tr1, "class", "bg-white");
-    			add_location(tr1, file$8, 16, 4, 890);
+    			add_location(tr1, file$8, 16, 4, 886);
     			attr_dev(td6, "class", "border px-4 py-2");
-    			add_location(td6, file$8, 25, 6, 1250);
+    			add_location(td6, file$8, 25, 6, 1233);
     			attr_dev(td7, "class", "border px-4 py-2");
-    			add_location(td7, file$8, 26, 6, 1298);
+    			add_location(td7, file$8, 26, 6, 1281);
     			attr_dev(td8, "class", "border px-4 py-2");
-    			add_location(td8, file$8, 27, 6, 1348);
+    			add_location(td8, file$8, 27, 6, 1339);
     			attr_dev(td9, "class", "border px-4 py-2");
-    			add_location(td9, file$8, 28, 6, 1397);
+    			add_location(td9, file$8, 28, 6, 1384);
     			attr_dev(td10, "class", "border px-4 py-2");
-    			add_location(td10, file$8, 29, 6, 1446);
+    			add_location(td10, file$8, 29, 6, 1428);
     			attr_dev(td11, "class", "border px-4 py-2");
-    			add_location(td11, file$8, 30, 6, 1496);
+    			add_location(td11, file$8, 30, 6, 1470);
     			attr_dev(tr2, "class", "bg-gray-100");
-    			add_location(tr2, file$8, 24, 4, 1219);
-    			attr_dev(td12, "class", "border px-4 py-2");
-    			add_location(td12, file$8, 33, 6, 1582);
-    			attr_dev(td13, "class", "border px-4 py-2");
-    			add_location(td13, file$8, 34, 6, 1630);
-    			attr_dev(td14, "class", "border px-4 py-2");
-    			add_location(td14, file$8, 35, 6, 1680);
-    			attr_dev(td15, "class", "border px-4 py-2");
-    			add_location(td15, file$8, 36, 6, 1729);
-    			attr_dev(td16, "class", "border px-4 py-2");
-    			add_location(td16, file$8, 37, 6, 1779);
-    			attr_dev(td17, "class", "border px-4 py-2");
-    			add_location(td17, file$8, 38, 6, 1829);
-    			attr_dev(tr3, "class", "bg-white");
-    			add_location(tr3, file$8, 32, 4, 1554);
-    			attr_dev(td18, "class", "border px-4 py-2");
-    			add_location(td18, file$8, 41, 6, 1915);
-    			attr_dev(td19, "class", "border px-4 py-2");
-    			add_location(td19, file$8, 42, 6, 1963);
-    			attr_dev(td20, "class", "border px-4 py-2");
-    			add_location(td20, file$8, 43, 6, 2013);
-    			attr_dev(td21, "class", "border px-4 py-2");
-    			add_location(td21, file$8, 44, 6, 2063);
-    			attr_dev(td22, "class", "border px-4 py-2");
-    			add_location(td22, file$8, 45, 6, 2113);
-    			attr_dev(td23, "class", "border px-4 py-2");
-    			add_location(td23, file$8, 46, 6, 2163);
-    			attr_dev(tr4, "class", "bg-white");
-    			add_location(tr4, file$8, 40, 4, 1887);
-    			add_location(tbody, file$8, 15, 2, 878);
+    			add_location(tr2, file$8, 24, 4, 1202);
+    			add_location(tbody, file$8, 15, 2, 874);
     			attr_dev(table, "class", "table-fixed my-6 w-full");
     			add_location(table, file$8, 4, 0, 21);
     		},
@@ -7765,32 +7641,6 @@
     			append_dev(tr2, td10);
     			append_dev(tr2, t33);
     			append_dev(tr2, td11);
-    			append_dev(tbody, t35);
-    			append_dev(tbody, tr3);
-    			append_dev(tr3, td12);
-    			append_dev(tr3, t37);
-    			append_dev(tr3, td13);
-    			append_dev(tr3, t39);
-    			append_dev(tr3, td14);
-    			append_dev(tr3, t41);
-    			append_dev(tr3, td15);
-    			append_dev(tr3, t43);
-    			append_dev(tr3, td16);
-    			append_dev(tr3, t45);
-    			append_dev(tr3, td17);
-    			append_dev(tbody, t47);
-    			append_dev(tbody, tr4);
-    			append_dev(tr4, td18);
-    			append_dev(tr4, t49);
-    			append_dev(tr4, td19);
-    			append_dev(tr4, t51);
-    			append_dev(tr4, td20);
-    			append_dev(tr4, t53);
-    			append_dev(tr4, td21);
-    			append_dev(tr4, t55);
-    			append_dev(tr4, td22);
-    			append_dev(tr4, t57);
-    			append_dev(tr4, td23);
     		},
 
     		p: noop,
@@ -7820,7 +7670,7 @@
     const file$9 = "src/components/S3.svelte";
 
     function create_fragment$a(ctx) {
-    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, tbody, tr1, td0, t11, td1, t13, td2, t15, td3, t17, td4, t19, tr2, td5, t21, td6, t23, td7, t25, td8, t27, td9, t29, tr3, td10, t31, td11, t33, td12, t35, td13, t37, td14, t39, tr4, td15, t41, td16, t43, td17, t45, td18, t47, td19;
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
 
     	const block = {
     		c: function create() {
@@ -7828,147 +7678,106 @@
     			thead = element("thead");
     			tr0 = element("tr");
     			th0 = element("th");
-    			th0.textContent = "Días";
+    			th0.textContent = "Tramo";
     			t1 = space();
     			th1 = element("th");
-    			th1.textContent = "Presentación voluntaria";
+    			th1.textContent = "Días";
     			t3 = space();
     			th2 = element("th");
-    			th2.textContent = "Denuncia polin";
+    			th2.textContent = "Presentación voluntaria";
     			t5 = space();
     			th3 = element("th");
-    			th3.textContent = "Reincidencia presentación voluntaria";
+    			th3.textContent = "Denuncia PDI";
     			t7 = space();
     			th4 = element("th");
-    			th4.textContent = "Reincidencia denuncia polin";
+    			th4.textContent = "Reincidencia presentación voluntaria";
     			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Reincidencia denuncia PDI";
+    			t11 = space();
     			tbody = element("tbody");
     			tr1 = element("tr");
     			td0 = element("td");
-    			td0.textContent = "1 a 100";
-    			t11 = space();
-    			td1 = element("td");
-    			td1.textContent = "$ 40.871";
+    			td0.textContent = "Tramo 1";
     			t13 = space();
-    			td2 = element("td");
-    			td2.textContent = "$ 61.307";
+    			td1 = element("td");
+    			td1.textContent = "Antes de 5 días";
     			t15 = space();
-    			td3 = element("td");
-    			td3.textContent = "$ 122.613";
+    			td2 = element("td");
+    			td2.textContent = "Amonestación";
     			t17 = space();
-    			td4 = element("td");
-    			td4.textContent = "$ 817.423";
+    			td3 = element("td");
+    			td3.textContent = "Amonestación";
     			t19 = space();
-    			tr2 = element("tr");
-    			td5 = element("td");
-    			td5.textContent = "101 a 190";
+    			td4 = element("td");
+    			td4.textContent = "1";
     			t21 = space();
-    			td6 = element("td");
-    			td6.textContent = "$ 102.178";
+    			td5 = element("td");
+    			td5.textContent = "1.5";
     			t23 = space();
-    			td7 = element("td");
-    			td7.textContent = "$ 154.196";
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			td6.textContent = "Tramo 2";
     			t25 = space();
-    			td8 = element("td");
-    			td8.textContent = "$ 306.534";
+    			td7 = element("td");
+    			td7.textContent = "Despúes de 5 días";
     			t27 = space();
-    			td9 = element("td");
-    			td9.textContent = "$ 817.423";
+    			td8 = element("td");
+    			td8.textContent = "Amonestación";
     			t29 = space();
-    			tr3 = element("tr");
-    			td10 = element("td");
-    			td10.textContent = "191 a 375";
+    			td9 = element("td");
+    			td9.textContent = "Amonestación";
     			t31 = space();
-    			td11 = element("td");
-    			td11.textContent = "$ 204.356";
+    			td10 = element("td");
+    			td10.textContent = "1";
     			t33 = space();
-    			td12 = element("td");
-    			td12.textContent = "$ 306.534";
-    			t35 = space();
-    			td13 = element("td");
-    			td13.textContent = "$ 510.890";
-    			t37 = space();
-    			td14 = element("td");
-    			td14.textContent = "$ 817.423";
-    			t39 = space();
-    			tr4 = element("tr");
-    			td15 = element("td");
-    			td15.textContent = "376 y más";
-    			t41 = space();
-    			td16 = element("td");
-    			td16.textContent = "$ 408.712";
-    			t43 = space();
-    			td17 = element("td");
-    			td17.textContent = "$ 510.890";
-    			t45 = space();
-    			td18 = element("td");
-    			td18.textContent = "$ 613.067";
-    			t47 = space();
-    			td19 = element("td");
-    			td19.textContent = "$ 817.423";
+    			td11 = element("td");
+    			td11.textContent = "2";
     			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th0, file$9, 7, 6, 88);
-    			attr_dev(th1, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th1, file$9, 8, 6, 203);
+    			add_location(th0, file$9, 7, 6, 86);
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th1, file$9, 8, 6, 202);
     			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th2, file$9, 9, 6, 337);
+    			add_location(th2, file$9, 9, 6, 317);
     			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th3, file$9, 10, 6, 462);
+    			add_location(th3, file$9, 10, 6, 451);
     			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th4, file$9, 11, 6, 609);
-    			add_location(tr0, file$9, 6, 4, 77);
-    			add_location(thead, file$9, 5, 2, 65);
+    			add_location(th4, file$9, 11, 6, 574);
+    			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th5, file$9, 12, 6, 721);
+    			add_location(tr0, file$9, 6, 4, 75);
+    			add_location(thead, file$9, 5, 2, 63);
     			attr_dev(td0, "class", "border px-4 py-2");
-    			add_location(td0, file$9, 16, 6, 804);
+    			add_location(td0, file$9, 17, 6, 914);
     			attr_dev(td1, "class", "border px-4 py-2");
-    			add_location(td1, file$9, 17, 6, 852);
+    			add_location(td1, file$9, 18, 6, 962);
     			attr_dev(td2, "class", "border px-4 py-2");
-    			add_location(td2, file$9, 18, 6, 901);
+    			add_location(td2, file$9, 19, 6, 1018);
     			attr_dev(td3, "class", "border px-4 py-2");
-    			add_location(td3, file$9, 19, 6, 950);
+    			add_location(td3, file$9, 20, 6, 1071);
     			attr_dev(td4, "class", "border px-4 py-2");
-    			add_location(td4, file$9, 20, 6, 1000);
-    			attr_dev(tr1, "class", "bg-white");
-    			add_location(tr1, file$9, 15, 4, 776);
+    			add_location(td4, file$9, 21, 6, 1124);
     			attr_dev(td5, "class", "border px-4 py-2");
-    			add_location(td5, file$9, 23, 6, 1089);
+    			add_location(td5, file$9, 22, 6, 1166);
+    			attr_dev(tr1, "class", "bg-white");
+    			add_location(tr1, file$9, 16, 4, 886);
     			attr_dev(td6, "class", "border px-4 py-2");
-    			add_location(td6, file$9, 24, 6, 1139);
+    			add_location(td6, file$9, 25, 6, 1249);
     			attr_dev(td7, "class", "border px-4 py-2");
-    			add_location(td7, file$9, 25, 6, 1189);
+    			add_location(td7, file$9, 26, 6, 1297);
     			attr_dev(td8, "class", "border px-4 py-2");
-    			add_location(td8, file$9, 26, 6, 1239);
+    			add_location(td8, file$9, 27, 6, 1355);
     			attr_dev(td9, "class", "border px-4 py-2");
-    			add_location(td9, file$9, 27, 6, 1289);
-    			attr_dev(tr2, "class", "bg-gray-100");
-    			add_location(tr2, file$9, 22, 4, 1058);
+    			add_location(td9, file$9, 28, 6, 1408);
     			attr_dev(td10, "class", "border px-4 py-2");
-    			add_location(td10, file$9, 30, 6, 1375);
+    			add_location(td10, file$9, 29, 6, 1461);
     			attr_dev(td11, "class", "border px-4 py-2");
-    			add_location(td11, file$9, 31, 6, 1425);
-    			attr_dev(td12, "class", "border px-4 py-2");
-    			add_location(td12, file$9, 32, 6, 1475);
-    			attr_dev(td13, "class", "border px-4 py-2");
-    			add_location(td13, file$9, 33, 6, 1525);
-    			attr_dev(td14, "class", "border px-4 py-2");
-    			add_location(td14, file$9, 34, 6, 1575);
-    			attr_dev(tr3, "class", "bg-white");
-    			add_location(tr3, file$9, 29, 4, 1347);
-    			attr_dev(td15, "class", "border px-4 py-2");
-    			add_location(td15, file$9, 37, 6, 1661);
-    			attr_dev(td16, "class", "border px-4 py-2");
-    			add_location(td16, file$9, 38, 6, 1711);
-    			attr_dev(td17, "class", "border px-4 py-2");
-    			add_location(td17, file$9, 39, 6, 1761);
-    			attr_dev(td18, "class", "border px-4 py-2");
-    			add_location(td18, file$9, 40, 6, 1811);
-    			attr_dev(td19, "class", "border px-4 py-2");
-    			add_location(td19, file$9, 41, 6, 1861);
-    			attr_dev(tr4, "class", "bg-white");
-    			add_location(tr4, file$9, 36, 4, 1633);
-    			add_location(tbody, file$9, 14, 2, 764);
+    			add_location(td11, file$9, 30, 6, 1503);
+    			attr_dev(tr2, "class", "bg-gray-100");
+    			add_location(tr2, file$9, 24, 4, 1218);
+    			add_location(tbody, file$9, 15, 2, 874);
     			attr_dev(table, "class", "table-fixed my-6 w-full");
-    			add_location(table, file$9, 4, 0, 23);
+    			add_location(table, file$9, 4, 0, 21);
     		},
 
     		l: function claim(nodes) {
@@ -7988,51 +7797,35 @@
     			append_dev(tr0, th3);
     			append_dev(tr0, t7);
     			append_dev(tr0, th4);
-    			append_dev(table, t9);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(table, t11);
     			append_dev(table, tbody);
     			append_dev(tbody, tr1);
     			append_dev(tr1, td0);
-    			append_dev(tr1, t11);
-    			append_dev(tr1, td1);
     			append_dev(tr1, t13);
-    			append_dev(tr1, td2);
+    			append_dev(tr1, td1);
     			append_dev(tr1, t15);
-    			append_dev(tr1, td3);
+    			append_dev(tr1, td2);
     			append_dev(tr1, t17);
+    			append_dev(tr1, td3);
+    			append_dev(tr1, t19);
     			append_dev(tr1, td4);
-    			append_dev(tbody, t19);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td5);
+    			append_dev(tbody, t23);
     			append_dev(tbody, tr2);
-    			append_dev(tr2, td5);
-    			append_dev(tr2, t21);
     			append_dev(tr2, td6);
-    			append_dev(tr2, t23);
-    			append_dev(tr2, td7);
     			append_dev(tr2, t25);
-    			append_dev(tr2, td8);
+    			append_dev(tr2, td7);
     			append_dev(tr2, t27);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t29);
     			append_dev(tr2, td9);
-    			append_dev(tbody, t29);
-    			append_dev(tbody, tr3);
-    			append_dev(tr3, td10);
-    			append_dev(tr3, t31);
-    			append_dev(tr3, td11);
-    			append_dev(tr3, t33);
-    			append_dev(tr3, td12);
-    			append_dev(tr3, t35);
-    			append_dev(tr3, td13);
-    			append_dev(tr3, t37);
-    			append_dev(tr3, td14);
-    			append_dev(tbody, t39);
-    			append_dev(tbody, tr4);
-    			append_dev(tr4, td15);
-    			append_dev(tr4, t41);
-    			append_dev(tr4, td16);
-    			append_dev(tr4, t43);
-    			append_dev(tr4, td17);
-    			append_dev(tr4, t45);
-    			append_dev(tr4, td18);
-    			append_dev(tr4, t47);
-    			append_dev(tr4, td19);
+    			append_dev(tr2, t31);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t33);
+    			append_dev(tr2, td11);
     		},
 
     		p: noop,
@@ -8062,7 +7855,7 @@
     const file$a = "src/components/S4.svelte";
 
     function create_fragment$b(ctx) {
-    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, tbody, tr1, td0, t11, td1, t13, td2, t15, td3, t17, td4, t19, tr2, td5, t21, td6, t23, td7, t25, td8, t27, td9, t29, tr3, td10, t31, td11, t33, td12, t35, td13, t37, td14, t39, tr4, td15, t41, td16, t43, td17, t45, td18, t47, td19;
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
 
     	const block = {
     		c: function create() {
@@ -8070,147 +7863,106 @@
     			thead = element("thead");
     			tr0 = element("tr");
     			th0 = element("th");
-    			th0.textContent = "Días";
+    			th0.textContent = "Tramo";
     			t1 = space();
     			th1 = element("th");
-    			th1.textContent = "Presentación voluntaria";
+    			th1.textContent = "Días";
     			t3 = space();
     			th2 = element("th");
-    			th2.textContent = "Denuncia polin";
+    			th2.textContent = "Presentación voluntaria";
     			t5 = space();
     			th3 = element("th");
-    			th3.textContent = "Reincidencia presentación voluntaria";
+    			th3.textContent = "Denuncia PDI";
     			t7 = space();
     			th4 = element("th");
-    			th4.textContent = "Reincidencia denuncia polin";
+    			th4.textContent = "Reincidencia presentación voluntaria";
     			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Reincidencia denuncia PDI";
+    			t11 = space();
     			tbody = element("tbody");
     			tr1 = element("tr");
     			td0 = element("td");
-    			td0.textContent = "1 a 100";
-    			t11 = space();
-    			td1 = element("td");
-    			td1.textContent = "$ 817.423";
+    			td0.textContent = "Tramo 1";
     			t13 = space();
-    			td2 = element("td");
-    			td2.textContent = "$ 980.908";
+    			td1 = element("td");
+    			td1.textContent = "Antes de 5 días";
     			t15 = space();
-    			td3 = element("td");
-    			td3.textContent = "$ 1.114.392";
+    			td2 = element("td");
+    			td2.textContent = "0.25";
     			t17 = space();
-    			td4 = element("td");
-    			td4.textContent = "$ 2.069.057";
+    			td3 = element("td");
+    			td3.textContent = "0.38";
     			t19 = space();
-    			tr2 = element("tr");
-    			td5 = element("td");
-    			td5.textContent = "101 a 190";
+    			td4 = element("td");
+    			td4.textContent = "2.5";
     			t21 = space();
-    			td6 = element("td");
-    			td6.textContent = "$ 1.906.090";
+    			td5 = element("td");
+    			td5.textContent = "3.8";
     			t23 = space();
-    			td7 = element("td");
-    			td7.textContent = "$ 1.315.308";
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			td6.textContent = "Tramo 2";
     			t25 = space();
-    			td8 = element("td");
-    			td8.textContent = "$ 1.534.526";
+    			td7 = element("td");
+    			td7.textContent = "Despúes de 5 días";
     			t27 = space();
-    			td9 = element("td");
-    			td9.textContent = "$ 2.069.057";
+    			td8 = element("td");
+    			td8.textContent = "0.25";
     			t29 = space();
-    			tr3 = element("tr");
-    			td10 = element("td");
-    			td10.textContent = "191 a 375";
+    			td9 = element("td");
+    			td9.textContent = "0.5";
     			t31 = space();
-    			td11 = element("td");
-    			td11.textContent = "$ 1.374.757";
+    			td10 = element("td");
+    			td10.textContent = "2.5";
     			t33 = space();
-    			td12 = element("td");
-    			td12.textContent = "$ 1.649.709";
-    			t35 = space();
-    			td13 = element("td");
-    			td13.textContent = "$ 1.924.660";
-    			t37 = space();
-    			td14 = element("td");
-    			td14.textContent = "$ 2.069.057";
-    			t39 = space();
-    			tr4 = element("tr");
-    			td15 = element("td");
-    			td15.textContent = "376 y más";
-    			t41 = space();
-    			td16 = element("td");
-    			td16.textContent = "$ 1.653.424";
-    			t43 = space();
-    			td17 = element("td");
-    			td17.textContent = "$ 1.984.109";
-    			t45 = space();
-    			td18 = element("td");
-    			td18.textContent = "$ 2.013.834";
-    			t47 = space();
-    			td19 = element("td");
-    			td19.textContent = "$ 2.069.057";
+    			td11 = element("td");
+    			td11.textContent = "5";
     			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th0, file$a, 7, 6, 88);
-    			attr_dev(th1, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th1, file$a, 8, 6, 203);
+    			add_location(th0, file$a, 7, 6, 86);
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th1, file$a, 8, 6, 202);
     			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th2, file$a, 9, 6, 337);
+    			add_location(th2, file$a, 9, 6, 317);
     			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th3, file$a, 10, 6, 462);
+    			add_location(th3, file$a, 10, 6, 451);
     			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th4, file$a, 11, 6, 609);
-    			add_location(tr0, file$a, 6, 4, 77);
-    			add_location(thead, file$a, 5, 2, 65);
+    			add_location(th4, file$a, 11, 6, 574);
+    			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th5, file$a, 12, 6, 721);
+    			add_location(tr0, file$a, 6, 4, 75);
+    			add_location(thead, file$a, 5, 2, 63);
     			attr_dev(td0, "class", "border px-4 py-2");
-    			add_location(td0, file$a, 16, 6, 804);
+    			add_location(td0, file$a, 17, 6, 914);
     			attr_dev(td1, "class", "border px-4 py-2");
-    			add_location(td1, file$a, 17, 6, 852);
+    			add_location(td1, file$a, 18, 6, 962);
     			attr_dev(td2, "class", "border px-4 py-2");
-    			add_location(td2, file$a, 18, 6, 902);
+    			add_location(td2, file$a, 19, 6, 1018);
     			attr_dev(td3, "class", "border px-4 py-2");
-    			add_location(td3, file$a, 19, 6, 952);
+    			add_location(td3, file$a, 20, 6, 1063);
     			attr_dev(td4, "class", "border px-4 py-2");
-    			add_location(td4, file$a, 20, 6, 1004);
-    			attr_dev(tr1, "class", "bg-white");
-    			add_location(tr1, file$a, 15, 4, 776);
+    			add_location(td4, file$a, 21, 6, 1108);
     			attr_dev(td5, "class", "border px-4 py-2");
-    			add_location(td5, file$a, 23, 6, 1095);
+    			add_location(td5, file$a, 22, 6, 1152);
+    			attr_dev(tr1, "class", "bg-white");
+    			add_location(tr1, file$a, 16, 4, 886);
     			attr_dev(td6, "class", "border px-4 py-2");
-    			add_location(td6, file$a, 24, 6, 1145);
+    			add_location(td6, file$a, 25, 6, 1235);
     			attr_dev(td7, "class", "border px-4 py-2");
-    			add_location(td7, file$a, 25, 6, 1197);
+    			add_location(td7, file$a, 26, 6, 1283);
     			attr_dev(td8, "class", "border px-4 py-2");
-    			add_location(td8, file$a, 26, 6, 1249);
+    			add_location(td8, file$a, 27, 6, 1341);
     			attr_dev(td9, "class", "border px-4 py-2");
-    			add_location(td9, file$a, 27, 6, 1301);
-    			attr_dev(tr2, "class", "bg-gray-100");
-    			add_location(tr2, file$a, 22, 4, 1064);
+    			add_location(td9, file$a, 28, 6, 1386);
     			attr_dev(td10, "class", "border px-4 py-2");
-    			add_location(td10, file$a, 30, 6, 1389);
+    			add_location(td10, file$a, 29, 6, 1430);
     			attr_dev(td11, "class", "border px-4 py-2");
-    			add_location(td11, file$a, 31, 6, 1439);
-    			attr_dev(td12, "class", "border px-4 py-2");
-    			add_location(td12, file$a, 32, 6, 1491);
-    			attr_dev(td13, "class", "border px-4 py-2");
-    			add_location(td13, file$a, 33, 6, 1543);
-    			attr_dev(td14, "class", "border px-4 py-2");
-    			add_location(td14, file$a, 34, 6, 1595);
-    			attr_dev(tr3, "class", "bg-white");
-    			add_location(tr3, file$a, 29, 4, 1361);
-    			attr_dev(td15, "class", "border px-4 py-2");
-    			add_location(td15, file$a, 37, 6, 1683);
-    			attr_dev(td16, "class", "border px-4 py-2");
-    			add_location(td16, file$a, 38, 6, 1733);
-    			attr_dev(td17, "class", "border px-4 py-2");
-    			add_location(td17, file$a, 39, 6, 1785);
-    			attr_dev(td18, "class", "border px-4 py-2");
-    			add_location(td18, file$a, 40, 6, 1837);
-    			attr_dev(td19, "class", "border px-4 py-2");
-    			add_location(td19, file$a, 41, 6, 1889);
-    			attr_dev(tr4, "class", "bg-white");
-    			add_location(tr4, file$a, 36, 4, 1655);
-    			add_location(tbody, file$a, 14, 2, 764);
+    			add_location(td11, file$a, 30, 6, 1474);
+    			attr_dev(tr2, "class", "bg-gray-100");
+    			add_location(tr2, file$a, 24, 4, 1204);
+    			add_location(tbody, file$a, 15, 2, 874);
     			attr_dev(table, "class", "table-fixed my-6 w-full");
-    			add_location(table, file$a, 4, 0, 23);
+    			add_location(table, file$a, 4, 0, 21);
     		},
 
     		l: function claim(nodes) {
@@ -8230,51 +7982,35 @@
     			append_dev(tr0, th3);
     			append_dev(tr0, t7);
     			append_dev(tr0, th4);
-    			append_dev(table, t9);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(table, t11);
     			append_dev(table, tbody);
     			append_dev(tbody, tr1);
     			append_dev(tr1, td0);
-    			append_dev(tr1, t11);
-    			append_dev(tr1, td1);
     			append_dev(tr1, t13);
-    			append_dev(tr1, td2);
+    			append_dev(tr1, td1);
     			append_dev(tr1, t15);
-    			append_dev(tr1, td3);
+    			append_dev(tr1, td2);
     			append_dev(tr1, t17);
+    			append_dev(tr1, td3);
+    			append_dev(tr1, t19);
     			append_dev(tr1, td4);
-    			append_dev(tbody, t19);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td5);
+    			append_dev(tbody, t23);
     			append_dev(tbody, tr2);
-    			append_dev(tr2, td5);
-    			append_dev(tr2, t21);
     			append_dev(tr2, td6);
-    			append_dev(tr2, t23);
-    			append_dev(tr2, td7);
     			append_dev(tr2, t25);
-    			append_dev(tr2, td8);
+    			append_dev(tr2, td7);
     			append_dev(tr2, t27);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t29);
     			append_dev(tr2, td9);
-    			append_dev(tbody, t29);
-    			append_dev(tbody, tr3);
-    			append_dev(tr3, td10);
-    			append_dev(tr3, t31);
-    			append_dev(tr3, td11);
-    			append_dev(tr3, t33);
-    			append_dev(tr3, td12);
-    			append_dev(tr3, t35);
-    			append_dev(tr3, td13);
-    			append_dev(tr3, t37);
-    			append_dev(tr3, td14);
-    			append_dev(tbody, t39);
-    			append_dev(tbody, tr4);
-    			append_dev(tr4, td15);
-    			append_dev(tr4, t41);
-    			append_dev(tr4, td16);
-    			append_dev(tr4, t43);
-    			append_dev(tr4, td17);
-    			append_dev(tr4, t45);
-    			append_dev(tr4, td18);
-    			append_dev(tr4, t47);
-    			append_dev(tr4, td19);
+    			append_dev(tr2, t31);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t33);
+    			append_dev(tr2, td11);
     		},
 
     		p: noop,
@@ -8299,9 +8035,1489 @@
     	}
     }
 
+    /* src/components/S5.svelte generated by Svelte v3.12.1 */
+
+    const file$b = "src/components/S5.svelte";
+
+    function create_fragment$c(ctx) {
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
+
+    	const block = {
+    		c: function create() {
+    			table = element("table");
+    			thead = element("thead");
+    			tr0 = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "Tramo";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Días";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Presentación voluntaria";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Denuncia PDI";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Reincidencia presentación voluntaria";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Reincidencia denuncia PDI";
+    			t11 = space();
+    			tbody = element("tbody");
+    			tr1 = element("tr");
+    			td0 = element("td");
+    			td0.textContent = "Tramo 1";
+    			t13 = space();
+    			td1 = element("td");
+    			td1.textContent = "Antes de 5 días";
+    			t15 = space();
+    			td2 = element("td");
+    			td2.textContent = "0.25";
+    			t17 = space();
+    			td3 = element("td");
+    			td3.textContent = "0.38";
+    			t19 = space();
+    			td4 = element("td");
+    			td4.textContent = "2.5";
+    			t21 = space();
+    			td5 = element("td");
+    			td5.textContent = "3.8";
+    			t23 = space();
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			td6.textContent = "Tramo 2";
+    			t25 = space();
+    			td7 = element("td");
+    			td7.textContent = "Despúes de 5 días";
+    			t27 = space();
+    			td8 = element("td");
+    			td8.textContent = "0.25";
+    			t29 = space();
+    			td9 = element("td");
+    			td9.textContent = "0.5";
+    			t31 = space();
+    			td10 = element("td");
+    			td10.textContent = "2.5";
+    			t33 = space();
+    			td11 = element("td");
+    			td11.textContent = "5";
+    			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th0, file$b, 7, 6, 86);
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th1, file$b, 8, 6, 202);
+    			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th2, file$b, 9, 6, 317);
+    			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th3, file$b, 10, 6, 451);
+    			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th4, file$b, 11, 6, 574);
+    			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th5, file$b, 12, 6, 721);
+    			add_location(tr0, file$b, 6, 4, 75);
+    			add_location(thead, file$b, 5, 2, 63);
+    			attr_dev(td0, "class", "border px-4 py-2");
+    			add_location(td0, file$b, 17, 6, 914);
+    			attr_dev(td1, "class", "border px-4 py-2");
+    			add_location(td1, file$b, 18, 6, 962);
+    			attr_dev(td2, "class", "border px-4 py-2");
+    			add_location(td2, file$b, 19, 6, 1018);
+    			attr_dev(td3, "class", "border px-4 py-2");
+    			add_location(td3, file$b, 20, 6, 1063);
+    			attr_dev(td4, "class", "border px-4 py-2");
+    			add_location(td4, file$b, 21, 6, 1108);
+    			attr_dev(td5, "class", "border px-4 py-2");
+    			add_location(td5, file$b, 22, 6, 1152);
+    			attr_dev(tr1, "class", "bg-white");
+    			add_location(tr1, file$b, 16, 4, 886);
+    			attr_dev(td6, "class", "border px-4 py-2");
+    			add_location(td6, file$b, 25, 6, 1235);
+    			attr_dev(td7, "class", "border px-4 py-2");
+    			add_location(td7, file$b, 26, 6, 1283);
+    			attr_dev(td8, "class", "border px-4 py-2");
+    			add_location(td8, file$b, 27, 6, 1341);
+    			attr_dev(td9, "class", "border px-4 py-2");
+    			add_location(td9, file$b, 28, 6, 1386);
+    			attr_dev(td10, "class", "border px-4 py-2");
+    			add_location(td10, file$b, 29, 6, 1430);
+    			attr_dev(td11, "class", "border px-4 py-2");
+    			add_location(td11, file$b, 30, 6, 1474);
+    			attr_dev(tr2, "class", "bg-gray-100");
+    			add_location(tr2, file$b, 24, 4, 1204);
+    			add_location(tbody, file$b, 15, 2, 874);
+    			attr_dev(table, "class", "table-fixed my-6 w-full");
+    			add_location(table, file$b, 4, 0, 21);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, table, anchor);
+    			append_dev(table, thead);
+    			append_dev(thead, tr0);
+    			append_dev(tr0, th0);
+    			append_dev(tr0, t1);
+    			append_dev(tr0, th1);
+    			append_dev(tr0, t3);
+    			append_dev(tr0, th2);
+    			append_dev(tr0, t5);
+    			append_dev(tr0, th3);
+    			append_dev(tr0, t7);
+    			append_dev(tr0, th4);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(table, t11);
+    			append_dev(table, tbody);
+    			append_dev(tbody, tr1);
+    			append_dev(tr1, td0);
+    			append_dev(tr1, t13);
+    			append_dev(tr1, td1);
+    			append_dev(tr1, t15);
+    			append_dev(tr1, td2);
+    			append_dev(tr1, t17);
+    			append_dev(tr1, td3);
+    			append_dev(tr1, t19);
+    			append_dev(tr1, td4);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td5);
+    			append_dev(tbody, t23);
+    			append_dev(tbody, tr2);
+    			append_dev(tr2, td6);
+    			append_dev(tr2, t25);
+    			append_dev(tr2, td7);
+    			append_dev(tr2, t27);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t29);
+    			append_dev(tr2, td9);
+    			append_dev(tr2, t31);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t33);
+    			append_dev(tr2, td11);
+    		},
+
+    		p: noop,
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(table);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$c.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    class S5 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, null, create_fragment$c, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "S5", options, id: create_fragment$c.name });
+    	}
+    }
+
+    /* src/components/S6.svelte generated by Svelte v3.12.1 */
+
+    const file$c = "src/components/S6.svelte";
+
+    function create_fragment$d(ctx) {
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
+
+    	const block = {
+    		c: function create() {
+    			table = element("table");
+    			thead = element("thead");
+    			tr0 = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "Tramo";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Días";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Presentación voluntaria";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Denuncia PDI";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Reincidencia presentación voluntaria";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Reincidencia denuncia PDI";
+    			t11 = space();
+    			tbody = element("tbody");
+    			tr1 = element("tr");
+    			td0 = element("td");
+    			td0.textContent = "Tramo 1";
+    			t13 = space();
+    			td1 = element("td");
+    			td1.textContent = "Antes de 5 días";
+    			t15 = space();
+    			td2 = element("td");
+    			td2.textContent = "5";
+    			t17 = space();
+    			td3 = element("td");
+    			td3.textContent = "7.5";
+    			t19 = space();
+    			td4 = element("td");
+    			td4.textContent = "25";
+    			t21 = space();
+    			td5 = element("td");
+    			td5.textContent = "37.5";
+    			t23 = space();
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			td6.textContent = "Tramo 2";
+    			t25 = space();
+    			td7 = element("td");
+    			td7.textContent = "Despúes de 5 días";
+    			t27 = space();
+    			td8 = element("td");
+    			td8.textContent = "5";
+    			t29 = space();
+    			td9 = element("td");
+    			td9.textContent = "10";
+    			t31 = space();
+    			td10 = element("td");
+    			td10.textContent = "25";
+    			t33 = space();
+    			td11 = element("td");
+    			td11.textContent = "50";
+    			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th0, file$c, 7, 6, 86);
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th1, file$c, 8, 6, 202);
+    			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th2, file$c, 9, 6, 317);
+    			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th3, file$c, 10, 6, 451);
+    			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th4, file$c, 11, 6, 574);
+    			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th5, file$c, 12, 6, 721);
+    			add_location(tr0, file$c, 6, 4, 75);
+    			add_location(thead, file$c, 5, 2, 63);
+    			attr_dev(td0, "class", "border px-4 py-2");
+    			add_location(td0, file$c, 17, 6, 914);
+    			attr_dev(td1, "class", "border px-4 py-2");
+    			add_location(td1, file$c, 18, 6, 962);
+    			attr_dev(td2, "class", "border px-4 py-2");
+    			add_location(td2, file$c, 19, 6, 1018);
+    			attr_dev(td3, "class", "border px-4 py-2");
+    			add_location(td3, file$c, 20, 6, 1060);
+    			attr_dev(td4, "class", "border px-4 py-2");
+    			add_location(td4, file$c, 21, 6, 1104);
+    			attr_dev(td5, "class", "border px-4 py-2");
+    			add_location(td5, file$c, 22, 6, 1147);
+    			attr_dev(tr1, "class", "bg-white");
+    			add_location(tr1, file$c, 16, 4, 886);
+    			attr_dev(td6, "class", "border px-4 py-2");
+    			add_location(td6, file$c, 25, 6, 1231);
+    			attr_dev(td7, "class", "border px-4 py-2");
+    			add_location(td7, file$c, 26, 6, 1279);
+    			attr_dev(td8, "class", "border px-4 py-2");
+    			add_location(td8, file$c, 27, 6, 1337);
+    			attr_dev(td9, "class", "border px-4 py-2");
+    			add_location(td9, file$c, 28, 6, 1379);
+    			attr_dev(td10, "class", "border px-4 py-2");
+    			add_location(td10, file$c, 29, 6, 1422);
+    			attr_dev(td11, "class", "border px-4 py-2");
+    			add_location(td11, file$c, 30, 6, 1465);
+    			attr_dev(tr2, "class", "bg-gray-100");
+    			add_location(tr2, file$c, 24, 4, 1200);
+    			add_location(tbody, file$c, 15, 2, 874);
+    			attr_dev(table, "class", "table-fixed my-6 w-full");
+    			add_location(table, file$c, 4, 0, 21);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, table, anchor);
+    			append_dev(table, thead);
+    			append_dev(thead, tr0);
+    			append_dev(tr0, th0);
+    			append_dev(tr0, t1);
+    			append_dev(tr0, th1);
+    			append_dev(tr0, t3);
+    			append_dev(tr0, th2);
+    			append_dev(tr0, t5);
+    			append_dev(tr0, th3);
+    			append_dev(tr0, t7);
+    			append_dev(tr0, th4);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(table, t11);
+    			append_dev(table, tbody);
+    			append_dev(tbody, tr1);
+    			append_dev(tr1, td0);
+    			append_dev(tr1, t13);
+    			append_dev(tr1, td1);
+    			append_dev(tr1, t15);
+    			append_dev(tr1, td2);
+    			append_dev(tr1, t17);
+    			append_dev(tr1, td3);
+    			append_dev(tr1, t19);
+    			append_dev(tr1, td4);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td5);
+    			append_dev(tbody, t23);
+    			append_dev(tbody, tr2);
+    			append_dev(tr2, td6);
+    			append_dev(tr2, t25);
+    			append_dev(tr2, td7);
+    			append_dev(tr2, t27);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t29);
+    			append_dev(tr2, td9);
+    			append_dev(tr2, t31);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t33);
+    			append_dev(tr2, td11);
+    		},
+
+    		p: noop,
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(table);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$d.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    class S6 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, null, create_fragment$d, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "S6", options, id: create_fragment$d.name });
+    	}
+    }
+
+    /* src/components/S7.svelte generated by Svelte v3.12.1 */
+
+    const file$d = "src/components/S7.svelte";
+
+    function create_fragment$e(ctx) {
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
+
+    	const block = {
+    		c: function create() {
+    			table = element("table");
+    			thead = element("thead");
+    			tr0 = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "Tramo";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Días";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Presentación voluntaria";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Denuncia PDI";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Reincidencia presentación voluntaria";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Reincidencia denuncia PDI";
+    			t11 = space();
+    			tbody = element("tbody");
+    			tr1 = element("tr");
+    			td0 = element("td");
+    			td0.textContent = "Tramo 1";
+    			t13 = space();
+    			td1 = element("td");
+    			td1.textContent = "Antes de 5 días";
+    			t15 = space();
+    			td2 = element("td");
+    			td2.textContent = "0.5";
+    			t17 = space();
+    			td3 = element("td");
+    			td3.textContent = "0.75";
+    			t19 = space();
+    			td4 = element("td");
+    			td4.textContent = "10";
+    			t21 = space();
+    			td5 = element("td");
+    			td5.textContent = "15";
+    			t23 = space();
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			td6.textContent = "Tramo 2";
+    			t25 = space();
+    			td7 = element("td");
+    			td7.textContent = "Despúes de 5 días";
+    			t27 = space();
+    			td8 = element("td");
+    			td8.textContent = "0.5";
+    			t29 = space();
+    			td9 = element("td");
+    			td9.textContent = "1";
+    			t31 = space();
+    			td10 = element("td");
+    			td10.textContent = "10";
+    			t33 = space();
+    			td11 = element("td");
+    			td11.textContent = "20";
+    			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th0, file$d, 7, 6, 86);
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th1, file$d, 8, 6, 202);
+    			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th2, file$d, 9, 6, 317);
+    			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th3, file$d, 10, 6, 451);
+    			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th4, file$d, 11, 6, 574);
+    			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th5, file$d, 12, 6, 721);
+    			add_location(tr0, file$d, 6, 4, 75);
+    			add_location(thead, file$d, 5, 2, 63);
+    			attr_dev(td0, "class", "border px-4 py-2");
+    			add_location(td0, file$d, 17, 6, 914);
+    			attr_dev(td1, "class", "border px-4 py-2");
+    			add_location(td1, file$d, 18, 6, 962);
+    			attr_dev(td2, "class", "border px-4 py-2");
+    			add_location(td2, file$d, 19, 6, 1018);
+    			attr_dev(td3, "class", "border px-4 py-2");
+    			add_location(td3, file$d, 20, 6, 1062);
+    			attr_dev(td4, "class", "border px-4 py-2");
+    			add_location(td4, file$d, 21, 6, 1107);
+    			attr_dev(td5, "class", "border px-4 py-2");
+    			add_location(td5, file$d, 22, 6, 1150);
+    			attr_dev(tr1, "class", "bg-white");
+    			add_location(tr1, file$d, 16, 4, 886);
+    			attr_dev(td6, "class", "border px-4 py-2");
+    			add_location(td6, file$d, 25, 6, 1232);
+    			attr_dev(td7, "class", "border px-4 py-2");
+    			add_location(td7, file$d, 26, 6, 1280);
+    			attr_dev(td8, "class", "border px-4 py-2");
+    			add_location(td8, file$d, 27, 6, 1338);
+    			attr_dev(td9, "class", "border px-4 py-2");
+    			add_location(td9, file$d, 28, 6, 1382);
+    			attr_dev(td10, "class", "border px-4 py-2");
+    			add_location(td10, file$d, 29, 6, 1424);
+    			attr_dev(td11, "class", "border px-4 py-2");
+    			add_location(td11, file$d, 30, 6, 1467);
+    			attr_dev(tr2, "class", "bg-gray-100");
+    			add_location(tr2, file$d, 24, 4, 1201);
+    			add_location(tbody, file$d, 15, 2, 874);
+    			attr_dev(table, "class", "table-fixed my-6 w-full");
+    			add_location(table, file$d, 4, 0, 21);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, table, anchor);
+    			append_dev(table, thead);
+    			append_dev(thead, tr0);
+    			append_dev(tr0, th0);
+    			append_dev(tr0, t1);
+    			append_dev(tr0, th1);
+    			append_dev(tr0, t3);
+    			append_dev(tr0, th2);
+    			append_dev(tr0, t5);
+    			append_dev(tr0, th3);
+    			append_dev(tr0, t7);
+    			append_dev(tr0, th4);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(table, t11);
+    			append_dev(table, tbody);
+    			append_dev(tbody, tr1);
+    			append_dev(tr1, td0);
+    			append_dev(tr1, t13);
+    			append_dev(tr1, td1);
+    			append_dev(tr1, t15);
+    			append_dev(tr1, td2);
+    			append_dev(tr1, t17);
+    			append_dev(tr1, td3);
+    			append_dev(tr1, t19);
+    			append_dev(tr1, td4);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td5);
+    			append_dev(tbody, t23);
+    			append_dev(tbody, tr2);
+    			append_dev(tr2, td6);
+    			append_dev(tr2, t25);
+    			append_dev(tr2, td7);
+    			append_dev(tr2, t27);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t29);
+    			append_dev(tr2, td9);
+    			append_dev(tr2, t31);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t33);
+    			append_dev(tr2, td11);
+    		},
+
+    		p: noop,
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(table);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$e.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    class S7 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, null, create_fragment$e, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "S7", options, id: create_fragment$e.name });
+    	}
+    }
+
+    /* src/components/S8.svelte generated by Svelte v3.12.1 */
+
+    const file$e = "src/components/S8.svelte";
+
+    function create_fragment$f(ctx) {
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
+
+    	const block = {
+    		c: function create() {
+    			table = element("table");
+    			thead = element("thead");
+    			tr0 = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "Tramo";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Días";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Presentación voluntaria";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Denuncia PDI";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Reincidencia presentación voluntaria";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Reincidencia denuncia PDI";
+    			t11 = space();
+    			tbody = element("tbody");
+    			tr1 = element("tr");
+    			td0 = element("td");
+    			td0.textContent = "Tramo 1";
+    			t13 = space();
+    			td1 = element("td");
+    			td1.textContent = "Antes de 5 días";
+    			t15 = space();
+    			td2 = element("td");
+    			td2.textContent = "5";
+    			t17 = space();
+    			td3 = element("td");
+    			td3.textContent = "7.5";
+    			t19 = space();
+    			td4 = element("td");
+    			td4.textContent = "20";
+    			t21 = space();
+    			td5 = element("td");
+    			td5.textContent = "30";
+    			t23 = space();
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			td6.textContent = "Tramo 2";
+    			t25 = space();
+    			td7 = element("td");
+    			td7.textContent = "Despúes de 5 días";
+    			t27 = space();
+    			td8 = element("td");
+    			td8.textContent = "5";
+    			t29 = space();
+    			td9 = element("td");
+    			td9.textContent = "10";
+    			t31 = space();
+    			td10 = element("td");
+    			td10.textContent = "20";
+    			t33 = space();
+    			td11 = element("td");
+    			td11.textContent = "40";
+    			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th0, file$e, 7, 6, 86);
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th1, file$e, 8, 6, 202);
+    			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th2, file$e, 9, 6, 317);
+    			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th3, file$e, 10, 6, 451);
+    			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th4, file$e, 11, 6, 574);
+    			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th5, file$e, 12, 6, 721);
+    			add_location(tr0, file$e, 6, 4, 75);
+    			add_location(thead, file$e, 5, 2, 63);
+    			attr_dev(td0, "class", "border px-4 py-2");
+    			add_location(td0, file$e, 17, 6, 914);
+    			attr_dev(td1, "class", "border px-4 py-2");
+    			add_location(td1, file$e, 18, 6, 962);
+    			attr_dev(td2, "class", "border px-4 py-2");
+    			add_location(td2, file$e, 19, 6, 1018);
+    			attr_dev(td3, "class", "border px-4 py-2");
+    			add_location(td3, file$e, 20, 6, 1060);
+    			attr_dev(td4, "class", "border px-4 py-2");
+    			add_location(td4, file$e, 21, 6, 1104);
+    			attr_dev(td5, "class", "border px-4 py-2");
+    			add_location(td5, file$e, 22, 6, 1147);
+    			attr_dev(tr1, "class", "bg-white");
+    			add_location(tr1, file$e, 16, 4, 886);
+    			attr_dev(td6, "class", "border px-4 py-2");
+    			add_location(td6, file$e, 25, 6, 1229);
+    			attr_dev(td7, "class", "border px-4 py-2");
+    			add_location(td7, file$e, 26, 6, 1277);
+    			attr_dev(td8, "class", "border px-4 py-2");
+    			add_location(td8, file$e, 27, 6, 1335);
+    			attr_dev(td9, "class", "border px-4 py-2");
+    			add_location(td9, file$e, 28, 6, 1377);
+    			attr_dev(td10, "class", "border px-4 py-2");
+    			add_location(td10, file$e, 29, 6, 1420);
+    			attr_dev(td11, "class", "border px-4 py-2");
+    			add_location(td11, file$e, 30, 6, 1463);
+    			attr_dev(tr2, "class", "bg-gray-100");
+    			add_location(tr2, file$e, 24, 4, 1198);
+    			add_location(tbody, file$e, 15, 2, 874);
+    			attr_dev(table, "class", "table-fixed my-6 w-full");
+    			add_location(table, file$e, 4, 0, 21);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, table, anchor);
+    			append_dev(table, thead);
+    			append_dev(thead, tr0);
+    			append_dev(tr0, th0);
+    			append_dev(tr0, t1);
+    			append_dev(tr0, th1);
+    			append_dev(tr0, t3);
+    			append_dev(tr0, th2);
+    			append_dev(tr0, t5);
+    			append_dev(tr0, th3);
+    			append_dev(tr0, t7);
+    			append_dev(tr0, th4);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(table, t11);
+    			append_dev(table, tbody);
+    			append_dev(tbody, tr1);
+    			append_dev(tr1, td0);
+    			append_dev(tr1, t13);
+    			append_dev(tr1, td1);
+    			append_dev(tr1, t15);
+    			append_dev(tr1, td2);
+    			append_dev(tr1, t17);
+    			append_dev(tr1, td3);
+    			append_dev(tr1, t19);
+    			append_dev(tr1, td4);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td5);
+    			append_dev(tbody, t23);
+    			append_dev(tbody, tr2);
+    			append_dev(tr2, td6);
+    			append_dev(tr2, t25);
+    			append_dev(tr2, td7);
+    			append_dev(tr2, t27);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t29);
+    			append_dev(tr2, td9);
+    			append_dev(tr2, t31);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t33);
+    			append_dev(tr2, td11);
+    		},
+
+    		p: noop,
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(table);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$f.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    class S8 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, null, create_fragment$f, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "S8", options, id: create_fragment$f.name });
+    	}
+    }
+
+    /* src/components/S9.svelte generated by Svelte v3.12.1 */
+
+    const file$f = "src/components/S9.svelte";
+
+    function create_fragment$g(ctx) {
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
+
+    	const block = {
+    		c: function create() {
+    			table = element("table");
+    			thead = element("thead");
+    			tr0 = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "Tramo";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Días";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Presentación voluntaria";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Denuncia PDI";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Reincidencia presentación voluntaria";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Reincidencia denuncia PDI";
+    			t11 = space();
+    			tbody = element("tbody");
+    			tr1 = element("tr");
+    			td0 = element("td");
+    			td0.textContent = "Tramo 1";
+    			t13 = space();
+    			td1 = element("td");
+    			td1.textContent = "Antes de 5 días";
+    			t15 = space();
+    			td2 = element("td");
+    			td2.textContent = "15";
+    			t17 = space();
+    			td3 = element("td");
+    			td3.textContent = "22.5";
+    			t19 = space();
+    			td4 = element("td");
+    			td4.textContent = "50";
+    			t21 = space();
+    			td5 = element("td");
+    			td5.textContent = "75";
+    			t23 = space();
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			td6.textContent = "Tramo 2";
+    			t25 = space();
+    			td7 = element("td");
+    			td7.textContent = "Despúes de 5 días";
+    			t27 = space();
+    			td8 = element("td");
+    			td8.textContent = "15";
+    			t29 = space();
+    			td9 = element("td");
+    			td9.textContent = "30";
+    			t31 = space();
+    			td10 = element("td");
+    			td10.textContent = "50";
+    			t33 = space();
+    			td11 = element("td");
+    			td11.textContent = "100";
+    			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th0, file$f, 7, 6, 86);
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th1, file$f, 8, 6, 202);
+    			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th2, file$f, 9, 6, 317);
+    			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th3, file$f, 10, 6, 451);
+    			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th4, file$f, 11, 6, 574);
+    			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th5, file$f, 12, 6, 721);
+    			add_location(tr0, file$f, 6, 4, 75);
+    			add_location(thead, file$f, 5, 2, 63);
+    			attr_dev(td0, "class", "border px-4 py-2");
+    			add_location(td0, file$f, 17, 6, 914);
+    			attr_dev(td1, "class", "border px-4 py-2");
+    			add_location(td1, file$f, 18, 6, 962);
+    			attr_dev(td2, "class", "border px-4 py-2");
+    			add_location(td2, file$f, 19, 6, 1018);
+    			attr_dev(td3, "class", "border px-4 py-2");
+    			add_location(td3, file$f, 20, 6, 1061);
+    			attr_dev(td4, "class", "border px-4 py-2");
+    			add_location(td4, file$f, 21, 6, 1106);
+    			attr_dev(td5, "class", "border px-4 py-2");
+    			add_location(td5, file$f, 22, 6, 1149);
+    			attr_dev(tr1, "class", "bg-white");
+    			add_location(tr1, file$f, 16, 4, 886);
+    			attr_dev(td6, "class", "border px-4 py-2");
+    			add_location(td6, file$f, 25, 6, 1231);
+    			attr_dev(td7, "class", "border px-4 py-2");
+    			add_location(td7, file$f, 26, 6, 1279);
+    			attr_dev(td8, "class", "border px-4 py-2");
+    			add_location(td8, file$f, 27, 6, 1337);
+    			attr_dev(td9, "class", "border px-4 py-2");
+    			add_location(td9, file$f, 28, 6, 1380);
+    			attr_dev(td10, "class", "border px-4 py-2");
+    			add_location(td10, file$f, 29, 6, 1423);
+    			attr_dev(td11, "class", "border px-4 py-2");
+    			add_location(td11, file$f, 30, 6, 1466);
+    			attr_dev(tr2, "class", "bg-gray-100");
+    			add_location(tr2, file$f, 24, 4, 1200);
+    			add_location(tbody, file$f, 15, 2, 874);
+    			attr_dev(table, "class", "table-fixed my-6 w-full");
+    			add_location(table, file$f, 4, 0, 21);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, table, anchor);
+    			append_dev(table, thead);
+    			append_dev(thead, tr0);
+    			append_dev(tr0, th0);
+    			append_dev(tr0, t1);
+    			append_dev(tr0, th1);
+    			append_dev(tr0, t3);
+    			append_dev(tr0, th2);
+    			append_dev(tr0, t5);
+    			append_dev(tr0, th3);
+    			append_dev(tr0, t7);
+    			append_dev(tr0, th4);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(table, t11);
+    			append_dev(table, tbody);
+    			append_dev(tbody, tr1);
+    			append_dev(tr1, td0);
+    			append_dev(tr1, t13);
+    			append_dev(tr1, td1);
+    			append_dev(tr1, t15);
+    			append_dev(tr1, td2);
+    			append_dev(tr1, t17);
+    			append_dev(tr1, td3);
+    			append_dev(tr1, t19);
+    			append_dev(tr1, td4);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td5);
+    			append_dev(tbody, t23);
+    			append_dev(tbody, tr2);
+    			append_dev(tr2, td6);
+    			append_dev(tr2, t25);
+    			append_dev(tr2, td7);
+    			append_dev(tr2, t27);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t29);
+    			append_dev(tr2, td9);
+    			append_dev(tr2, t31);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t33);
+    			append_dev(tr2, td11);
+    		},
+
+    		p: noop,
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(table);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$g.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    class S9 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, null, create_fragment$g, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "S9", options, id: create_fragment$g.name });
+    	}
+    }
+
+    /* src/components/S10.svelte generated by Svelte v3.12.1 */
+
+    const file$g = "src/components/S10.svelte";
+
+    function create_fragment$h(ctx) {
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
+
+    	const block = {
+    		c: function create() {
+    			table = element("table");
+    			thead = element("thead");
+    			tr0 = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "Tramo";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Días";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Presentación voluntaria";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Denuncia PDI";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Reincidencia presentación voluntaria";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Reincidencia denuncia PDI";
+    			t11 = space();
+    			tbody = element("tbody");
+    			tr1 = element("tr");
+    			td0 = element("td");
+    			td0.textContent = "Tramo 1";
+    			t13 = space();
+    			td1 = element("td");
+    			td1.textContent = "Antes de 5 días";
+    			t15 = space();
+    			td2 = element("td");
+    			td2.textContent = "30";
+    			t17 = space();
+    			td3 = element("td");
+    			td3.textContent = "45";
+    			t19 = space();
+    			td4 = element("td");
+    			td4.textContent = "100";
+    			t21 = space();
+    			td5 = element("td");
+    			td5.textContent = "150";
+    			t23 = space();
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			td6.textContent = "Tramo 2";
+    			t25 = space();
+    			td7 = element("td");
+    			td7.textContent = "Despúes de 5 días";
+    			t27 = space();
+    			td8 = element("td");
+    			td8.textContent = "30";
+    			t29 = space();
+    			td9 = element("td");
+    			td9.textContent = "60";
+    			t31 = space();
+    			td10 = element("td");
+    			td10.textContent = "100";
+    			t33 = space();
+    			td11 = element("td");
+    			td11.textContent = "200";
+    			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th0, file$g, 7, 6, 86);
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th1, file$g, 8, 6, 202);
+    			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th2, file$g, 9, 6, 317);
+    			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th3, file$g, 10, 6, 451);
+    			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th4, file$g, 11, 6, 574);
+    			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th5, file$g, 12, 6, 721);
+    			add_location(tr0, file$g, 6, 4, 75);
+    			add_location(thead, file$g, 5, 2, 63);
+    			attr_dev(td0, "class", "border px-4 py-2");
+    			add_location(td0, file$g, 17, 6, 914);
+    			attr_dev(td1, "class", "border px-4 py-2");
+    			add_location(td1, file$g, 18, 6, 962);
+    			attr_dev(td2, "class", "border px-4 py-2");
+    			add_location(td2, file$g, 19, 6, 1018);
+    			attr_dev(td3, "class", "border px-4 py-2");
+    			add_location(td3, file$g, 20, 6, 1061);
+    			attr_dev(td4, "class", "border px-4 py-2");
+    			add_location(td4, file$g, 21, 6, 1104);
+    			attr_dev(td5, "class", "border px-4 py-2");
+    			add_location(td5, file$g, 22, 6, 1148);
+    			attr_dev(tr1, "class", "bg-white");
+    			add_location(tr1, file$g, 16, 4, 886);
+    			attr_dev(td6, "class", "border px-4 py-2");
+    			add_location(td6, file$g, 25, 6, 1231);
+    			attr_dev(td7, "class", "border px-4 py-2");
+    			add_location(td7, file$g, 26, 6, 1279);
+    			attr_dev(td8, "class", "border px-4 py-2");
+    			add_location(td8, file$g, 27, 6, 1337);
+    			attr_dev(td9, "class", "border px-4 py-2");
+    			add_location(td9, file$g, 28, 6, 1380);
+    			attr_dev(td10, "class", "border px-4 py-2");
+    			add_location(td10, file$g, 29, 6, 1423);
+    			attr_dev(td11, "class", "border px-4 py-2");
+    			add_location(td11, file$g, 30, 6, 1467);
+    			attr_dev(tr2, "class", "bg-gray-100");
+    			add_location(tr2, file$g, 24, 4, 1200);
+    			add_location(tbody, file$g, 15, 2, 874);
+    			attr_dev(table, "class", "table-fixed my-6 w-full");
+    			add_location(table, file$g, 4, 0, 21);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, table, anchor);
+    			append_dev(table, thead);
+    			append_dev(thead, tr0);
+    			append_dev(tr0, th0);
+    			append_dev(tr0, t1);
+    			append_dev(tr0, th1);
+    			append_dev(tr0, t3);
+    			append_dev(tr0, th2);
+    			append_dev(tr0, t5);
+    			append_dev(tr0, th3);
+    			append_dev(tr0, t7);
+    			append_dev(tr0, th4);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(table, t11);
+    			append_dev(table, tbody);
+    			append_dev(tbody, tr1);
+    			append_dev(tr1, td0);
+    			append_dev(tr1, t13);
+    			append_dev(tr1, td1);
+    			append_dev(tr1, t15);
+    			append_dev(tr1, td2);
+    			append_dev(tr1, t17);
+    			append_dev(tr1, td3);
+    			append_dev(tr1, t19);
+    			append_dev(tr1, td4);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td5);
+    			append_dev(tbody, t23);
+    			append_dev(tbody, tr2);
+    			append_dev(tr2, td6);
+    			append_dev(tr2, t25);
+    			append_dev(tr2, td7);
+    			append_dev(tr2, t27);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t29);
+    			append_dev(tr2, td9);
+    			append_dev(tr2, t31);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t33);
+    			append_dev(tr2, td11);
+    		},
+
+    		p: noop,
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(table);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$h.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    class S10 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, null, create_fragment$h, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "S10", options, id: create_fragment$h.name });
+    	}
+    }
+
+    /* src/components/S11.svelte generated by Svelte v3.12.1 */
+
+    const file$h = "src/components/S11.svelte";
+
+    function create_fragment$i(ctx) {
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
+
+    	const block = {
+    		c: function create() {
+    			table = element("table");
+    			thead = element("thead");
+    			tr0 = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "Tramo";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Días";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Presentación voluntaria";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Denuncia PDI";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Reincidencia presentación voluntaria";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Reincidencia denuncia PDI";
+    			t11 = space();
+    			tbody = element("tbody");
+    			tr1 = element("tr");
+    			td0 = element("td");
+    			td0.textContent = "Tramo 1";
+    			t13 = space();
+    			td1 = element("td");
+    			td1.textContent = "Antes de 5 días";
+    			t15 = space();
+    			td2 = element("td");
+    			td2.textContent = "15";
+    			t17 = space();
+    			td3 = element("td");
+    			td3.textContent = "22.5";
+    			t19 = space();
+    			td4 = element("td");
+    			td4.textContent = "50";
+    			t21 = space();
+    			td5 = element("td");
+    			td5.textContent = "75";
+    			t23 = space();
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			td6.textContent = "Tramo 2";
+    			t25 = space();
+    			td7 = element("td");
+    			td7.textContent = "Despúes de 5 días";
+    			t27 = space();
+    			td8 = element("td");
+    			td8.textContent = "15";
+    			t29 = space();
+    			td9 = element("td");
+    			td9.textContent = "30";
+    			t31 = space();
+    			td10 = element("td");
+    			td10.textContent = "50";
+    			t33 = space();
+    			td11 = element("td");
+    			td11.textContent = "100";
+    			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th0, file$h, 7, 6, 86);
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th1, file$h, 8, 6, 202);
+    			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th2, file$h, 9, 6, 317);
+    			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th3, file$h, 10, 6, 451);
+    			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th4, file$h, 11, 6, 574);
+    			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th5, file$h, 12, 6, 721);
+    			add_location(tr0, file$h, 6, 4, 75);
+    			add_location(thead, file$h, 5, 2, 63);
+    			attr_dev(td0, "class", "border px-4 py-2");
+    			add_location(td0, file$h, 17, 6, 914);
+    			attr_dev(td1, "class", "border px-4 py-2");
+    			add_location(td1, file$h, 18, 6, 962);
+    			attr_dev(td2, "class", "border px-4 py-2");
+    			add_location(td2, file$h, 19, 6, 1018);
+    			attr_dev(td3, "class", "border px-4 py-2");
+    			add_location(td3, file$h, 20, 6, 1061);
+    			attr_dev(td4, "class", "border px-4 py-2");
+    			add_location(td4, file$h, 21, 6, 1106);
+    			attr_dev(td5, "class", "border px-4 py-2");
+    			add_location(td5, file$h, 22, 6, 1149);
+    			attr_dev(tr1, "class", "bg-white");
+    			add_location(tr1, file$h, 16, 4, 886);
+    			attr_dev(td6, "class", "border px-4 py-2");
+    			add_location(td6, file$h, 25, 6, 1231);
+    			attr_dev(td7, "class", "border px-4 py-2");
+    			add_location(td7, file$h, 26, 6, 1279);
+    			attr_dev(td8, "class", "border px-4 py-2");
+    			add_location(td8, file$h, 27, 6, 1337);
+    			attr_dev(td9, "class", "border px-4 py-2");
+    			add_location(td9, file$h, 28, 6, 1380);
+    			attr_dev(td10, "class", "border px-4 py-2");
+    			add_location(td10, file$h, 29, 6, 1423);
+    			attr_dev(td11, "class", "border px-4 py-2");
+    			add_location(td11, file$h, 30, 6, 1466);
+    			attr_dev(tr2, "class", "bg-gray-100");
+    			add_location(tr2, file$h, 24, 4, 1200);
+    			add_location(tbody, file$h, 15, 2, 874);
+    			attr_dev(table, "class", "table-fixed my-6 w-full");
+    			add_location(table, file$h, 4, 0, 21);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, table, anchor);
+    			append_dev(table, thead);
+    			append_dev(thead, tr0);
+    			append_dev(tr0, th0);
+    			append_dev(tr0, t1);
+    			append_dev(tr0, th1);
+    			append_dev(tr0, t3);
+    			append_dev(tr0, th2);
+    			append_dev(tr0, t5);
+    			append_dev(tr0, th3);
+    			append_dev(tr0, t7);
+    			append_dev(tr0, th4);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(table, t11);
+    			append_dev(table, tbody);
+    			append_dev(tbody, tr1);
+    			append_dev(tr1, td0);
+    			append_dev(tr1, t13);
+    			append_dev(tr1, td1);
+    			append_dev(tr1, t15);
+    			append_dev(tr1, td2);
+    			append_dev(tr1, t17);
+    			append_dev(tr1, td3);
+    			append_dev(tr1, t19);
+    			append_dev(tr1, td4);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td5);
+    			append_dev(tbody, t23);
+    			append_dev(tbody, tr2);
+    			append_dev(tr2, td6);
+    			append_dev(tr2, t25);
+    			append_dev(tr2, td7);
+    			append_dev(tr2, t27);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t29);
+    			append_dev(tr2, td9);
+    			append_dev(tr2, t31);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t33);
+    			append_dev(tr2, td11);
+    		},
+
+    		p: noop,
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(table);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$i.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    class S11 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, null, create_fragment$i, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "S11", options, id: create_fragment$i.name });
+    	}
+    }
+
+    /* src/components/S12.svelte generated by Svelte v3.12.1 */
+
+    const file$i = "src/components/S12.svelte";
+
+    function create_fragment$j(ctx) {
+    	var table, thead, tr0, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, tr1, td0, t13, td1, t15, td2, t17, td3, t19, td4, t21, td5, t23, tr2, td6, t25, td7, t27, td8, t29, td9, t31, td10, t33, td11;
+
+    	const block = {
+    		c: function create() {
+    			table = element("table");
+    			thead = element("thead");
+    			tr0 = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "Tramo";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Días";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Presentación voluntaria";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Denuncia PDI";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Reincidencia presentación voluntaria";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Reincidencia denuncia PDI";
+    			t11 = space();
+    			tbody = element("tbody");
+    			tr1 = element("tr");
+    			td0 = element("td");
+    			td0.textContent = "Tramo 1";
+    			t13 = space();
+    			td1 = element("td");
+    			td1.textContent = "Antes de 5 días";
+    			t15 = space();
+    			td2 = element("td");
+    			td2.textContent = "0.5";
+    			t17 = space();
+    			td3 = element("td");
+    			td3.textContent = "0.75";
+    			t19 = space();
+    			td4 = element("td");
+    			td4.textContent = "5";
+    			t21 = space();
+    			td5 = element("td");
+    			td5.textContent = "7.5";
+    			t23 = space();
+    			tr2 = element("tr");
+    			td6 = element("td");
+    			td6.textContent = "Tramo 2";
+    			t25 = space();
+    			td7 = element("td");
+    			td7.textContent = "Despúes de 5 días";
+    			t27 = space();
+    			td8 = element("td");
+    			td8.textContent = "0.5";
+    			t29 = space();
+    			td9 = element("td");
+    			td9.textContent = "1";
+    			t31 = space();
+    			td10 = element("td");
+    			td10.textContent = "5";
+    			t33 = space();
+    			td11 = element("td");
+    			td11.textContent = "10";
+    			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th0, file$i, 7, 6, 86);
+    			attr_dev(th1, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th1, file$i, 8, 6, 202);
+    			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th2, file$i, 9, 6, 317);
+    			attr_dev(th3, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th3, file$i, 10, 6, 451);
+    			attr_dev(th4, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th4, file$i, 11, 6, 574);
+    			attr_dev(th5, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
+    			add_location(th5, file$i, 12, 6, 721);
+    			add_location(tr0, file$i, 6, 4, 75);
+    			add_location(thead, file$i, 5, 2, 63);
+    			attr_dev(td0, "class", "border px-4 py-2");
+    			add_location(td0, file$i, 17, 6, 914);
+    			attr_dev(td1, "class", "border px-4 py-2");
+    			add_location(td1, file$i, 18, 6, 962);
+    			attr_dev(td2, "class", "border px-4 py-2");
+    			add_location(td2, file$i, 19, 6, 1018);
+    			attr_dev(td3, "class", "border px-4 py-2");
+    			add_location(td3, file$i, 20, 6, 1062);
+    			attr_dev(td4, "class", "border px-4 py-2");
+    			add_location(td4, file$i, 21, 6, 1107);
+    			attr_dev(td5, "class", "border px-4 py-2");
+    			add_location(td5, file$i, 22, 6, 1149);
+    			attr_dev(tr1, "class", "bg-white");
+    			add_location(tr1, file$i, 16, 4, 886);
+    			attr_dev(td6, "class", "border px-4 py-2");
+    			add_location(td6, file$i, 25, 6, 1232);
+    			attr_dev(td7, "class", "border px-4 py-2");
+    			add_location(td7, file$i, 26, 6, 1280);
+    			attr_dev(td8, "class", "border px-4 py-2");
+    			add_location(td8, file$i, 27, 6, 1338);
+    			attr_dev(td9, "class", "border px-4 py-2");
+    			add_location(td9, file$i, 28, 6, 1382);
+    			attr_dev(td10, "class", "border px-4 py-2");
+    			add_location(td10, file$i, 29, 6, 1424);
+    			attr_dev(td11, "class", "border px-4 py-2");
+    			add_location(td11, file$i, 30, 6, 1466);
+    			attr_dev(tr2, "class", "bg-gray-100");
+    			add_location(tr2, file$i, 24, 4, 1201);
+    			add_location(tbody, file$i, 15, 2, 874);
+    			attr_dev(table, "class", "table-fixed my-6 w-full");
+    			add_location(table, file$i, 4, 0, 21);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, table, anchor);
+    			append_dev(table, thead);
+    			append_dev(thead, tr0);
+    			append_dev(tr0, th0);
+    			append_dev(tr0, t1);
+    			append_dev(tr0, th1);
+    			append_dev(tr0, t3);
+    			append_dev(tr0, th2);
+    			append_dev(tr0, t5);
+    			append_dev(tr0, th3);
+    			append_dev(tr0, t7);
+    			append_dev(tr0, th4);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(table, t11);
+    			append_dev(table, tbody);
+    			append_dev(tbody, tr1);
+    			append_dev(tr1, td0);
+    			append_dev(tr1, t13);
+    			append_dev(tr1, td1);
+    			append_dev(tr1, t15);
+    			append_dev(tr1, td2);
+    			append_dev(tr1, t17);
+    			append_dev(tr1, td3);
+    			append_dev(tr1, t19);
+    			append_dev(tr1, td4);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td5);
+    			append_dev(tbody, t23);
+    			append_dev(tbody, tr2);
+    			append_dev(tr2, td6);
+    			append_dev(tr2, t25);
+    			append_dev(tr2, td7);
+    			append_dev(tr2, t27);
+    			append_dev(tr2, td8);
+    			append_dev(tr2, t29);
+    			append_dev(tr2, td9);
+    			append_dev(tr2, t31);
+    			append_dev(tr2, td10);
+    			append_dev(tr2, t33);
+    			append_dev(tr2, td11);
+    		},
+
+    		p: noop,
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(table);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$j.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    class S12 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, null, create_fragment$j, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "S12", options, id: create_fragment$j.name });
+    	}
+    }
+
     /* src/pages/Ss.svelte generated by Svelte v3.12.1 */
 
-    const file$b = "src/pages/Ss.svelte";
+    const file$j = "src/pages/Ss.svelte";
 
     function get_each_context$4(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
@@ -8309,7 +9525,7 @@
     	return child_ctx;
     }
 
-    // (29:7) {#each questions as data1}
+    // (45:7) {#each questions as data1}
     function create_each_block$4(ctx) {
     	var option, t0_value = ctx.data1.name + "", t0, t1;
 
@@ -8320,7 +9536,7 @@
     			t1 = space();
     			option.__value = ctx.data1;
     			option.value = option.__value;
-    			add_location(option, file$b, 29, 7, 1174);
+    			add_location(option, file$j, 45, 7, 2311);
     		},
 
     		m: function mount(target, anchor) {
@@ -8337,11 +9553,11 @@
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$4.name, type: "each", source: "(29:7) {#each questions as data1}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$4.name, type: "each", source: "(45:7) {#each questions as data1}", ctx });
     	return block;
     }
 
-    // (40:2) {#if selected}
+    // (56:2) {#if selected}
     function create_if_block$2(ctx) {
     	var current_block_type_index, if_block, if_block_anchor, current;
 
@@ -8349,16 +9565,32 @@
     		create_if_block_1$1,
     		create_if_block_2,
     		create_if_block_3,
-    		create_if_block_4
+    		create_if_block_4,
+    		create_if_block_5,
+    		create_if_block_6,
+    		create_if_block_7,
+    		create_if_block_8,
+    		create_if_block_9,
+    		create_if_block_10,
+    		create_if_block_11,
+    		create_if_block_12
     	];
 
     	var if_blocks = [];
 
     	function select_block_type(changed, ctx) {
-    		if (ctx.selected.path=="si") return 0;
-    		if (ctx.selected.path=="tp") return 1;
-    		if (ctx.selected.path=="sm") return 2;
-    		if (ctx.selected.path=="sj") return 3;
+    		if (ctx.selected.path=="rsi") return 0;
+    		if (ctx.selected.path=="exr") return 1;
+    		if (ctx.selected.path=="cdn") return 2;
+    		if (ctx.selected.path=="rsa") return 3;
+    		if (ctx.selected.path=="tzf") return 4;
+    		if (ctx.selected.path=="scm") return 5;
+    		if (ctx.selected.path=="ex1") return 6;
+    		if (ctx.selected.path=="ex2") return 7;
+    		if (ctx.selected.path=="ex3") return 8;
+    		if (ctx.selected.path=="ex4") return 9;
+    		if (ctx.selected.path=="asa") return 10;
+    		if (ctx.selected.path=="qre") return 11;
     		return -1;
     	}
 
@@ -8423,11 +9655,299 @@
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$2.name, type: "if", source: "(40:2) {#if selected}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$2.name, type: "if", source: "(56:2) {#if selected}", ctx });
     	return block;
     }
 
-    // (47:34) 
+    // (79:35) 
+    function create_if_block_12(ctx) {
+    	var current;
+
+    	var s12 = new S12({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			s12.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(s12, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(s12.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(s12.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(s12, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_12.name, type: "if", source: "(79:35) ", ctx });
+    	return block;
+    }
+
+    // (77:35) 
+    function create_if_block_11(ctx) {
+    	var current;
+
+    	var s11 = new S11({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			s11.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(s11, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(s11.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(s11.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(s11, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_11.name, type: "if", source: "(77:35) ", ctx });
+    	return block;
+    }
+
+    // (75:35) 
+    function create_if_block_10(ctx) {
+    	var current;
+
+    	var s10 = new S10({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			s10.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(s10, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(s10.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(s10.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(s10, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_10.name, type: "if", source: "(75:35) ", ctx });
+    	return block;
+    }
+
+    // (73:35) 
+    function create_if_block_9(ctx) {
+    	var current;
+
+    	var s9 = new S9({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			s9.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(s9, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(s9.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(s9.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(s9, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_9.name, type: "if", source: "(73:35) ", ctx });
+    	return block;
+    }
+
+    // (71:35) 
+    function create_if_block_8(ctx) {
+    	var current;
+
+    	var s8 = new S8({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			s8.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(s8, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(s8.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(s8.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(s8, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_8.name, type: "if", source: "(71:35) ", ctx });
+    	return block;
+    }
+
+    // (69:35) 
+    function create_if_block_7(ctx) {
+    	var current;
+
+    	var s7 = new S7({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			s7.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(s7, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(s7.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(s7.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(s7, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_7.name, type: "if", source: "(69:35) ", ctx });
+    	return block;
+    }
+
+    // (67:35) 
+    function create_if_block_6(ctx) {
+    	var current;
+
+    	var s6 = new S6({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			s6.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(s6, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(s6.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(s6.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(s6, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_6.name, type: "if", source: "(67:35) ", ctx });
+    	return block;
+    }
+
+    // (65:35) 
+    function create_if_block_5(ctx) {
+    	var current;
+
+    	var s5 = new S5({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			s5.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(s5, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(s5.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(s5.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(s5, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_5.name, type: "if", source: "(65:35) ", ctx });
+    	return block;
+    }
+
+    // (63:35) 
     function create_if_block_4(ctx) {
     	var current;
 
@@ -8459,11 +9979,11 @@
     			destroy_component(s4, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_4.name, type: "if", source: "(47:34) ", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_4.name, type: "if", source: "(63:35) ", ctx });
     	return block;
     }
 
-    // (45:34) 
+    // (61:35) 
     function create_if_block_3(ctx) {
     	var current;
 
@@ -8495,11 +10015,11 @@
     			destroy_component(s3, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_3.name, type: "if", source: "(45:34) ", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_3.name, type: "if", source: "(61:35) ", ctx });
     	return block;
     }
 
-    // (43:34) 
+    // (59:35) 
     function create_if_block_2(ctx) {
     	var current;
 
@@ -8531,11 +10051,11 @@
     			destroy_component(s2, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_2.name, type: "if", source: "(43:34) ", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_2.name, type: "if", source: "(59:35) ", ctx });
     	return block;
     }
 
-    // (41:4) {#if selected.path=="si"}
+    // (57:4) {#if selected.path=="rsi"}
     function create_if_block_1$1(ctx) {
     	var current;
 
@@ -8567,11 +10087,11 @@
     			destroy_component(s1, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1$1.name, type: "if", source: "(41:4) {#if selected.path==\"si\"}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1$1.name, type: "if", source: "(57:4) {#if selected.path==\"rsi\"}", ctx });
     	return block;
     }
 
-    function create_fragment$c(ctx) {
+    function create_fragment$k(ctx) {
     	var div4, div3, h2, t1, div2, label, t3, div1, select, t4, div0, svg, path, t5, current, dispose;
 
     	let each_value = ctx.questions;
@@ -8608,29 +10128,29 @@
     			path = svg_element("path");
     			t5 = space();
     			if (if_block) if_block.c();
-    			add_location(h2, file$b, 22, 1, 600);
+    			add_location(h2, file$j, 38, 1, 1737);
     			attr_dev(label, "class", "block uppercase tracking-wide text-white text-xs font-bold mb-2");
     			attr_dev(label, "for", "contryselection");
-    			add_location(label, file$b, 25, 4, 748);
+    			add_location(label, file$j, 41, 4, 1885);
     			if (ctx.selected === void 0) add_render_callback(() => ctx.select_change_handler.call(select));
     			attr_dev(select, "class", "block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline text-sm");
-    			add_location(select, file$b, 27, 6, 919);
+    			add_location(select, file$j, 43, 6, 2056);
     			attr_dev(path, "d", "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z");
-    			add_location(path, file$b, 35, 95, 1461);
+    			add_location(path, file$j, 51, 95, 2598);
     			attr_dev(svg, "class", "fill-current h-4 w-4");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "viewBox", "0 0 20 20");
-    			add_location(svg, file$b, 35, 6, 1372);
+    			add_location(svg, file$j, 51, 6, 2509);
     			attr_dev(div0, "class", "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700");
-    			add_location(div0, file$b, 34, 4, 1268);
+    			add_location(div0, file$j, 50, 4, 2405);
     			attr_dev(div1, "class", "relative");
-    			add_location(div1, file$b, 26, 6, 890);
+    			add_location(div1, file$j, 42, 6, 2027);
     			attr_dev(div2, "class", "inline-block relative w-full mt-4");
-    			add_location(div2, file$b, 24, 0, 696);
+    			add_location(div2, file$j, 40, 0, 1833);
     			attr_dev(div3, "class", "w-4/5");
-    			add_location(div3, file$b, 21, 2, 579);
+    			add_location(div3, file$j, 37, 2, 1716);
     			attr_dev(div4, "class", "container mx-auto h-full flex justify-center items-center");
-    			add_location(div4, file$b, 20, 0, 505);
+    			add_location(div4, file$j, 36, 0, 1642);
     			dispose = listen_dev(select, "change", ctx.select_change_handler);
     		},
 
@@ -8730,7 +10250,7 @@
     			dispose();
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$c.name, type: "component", source: "", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$k.name, type: "component", source: "", ctx });
     	return block;
     }
 
@@ -8740,10 +10260,18 @@
     let selected;
 
     let questions = [
-      { path: 'si', name: `Estatus Irregular` },
-      { path: 'tp', name: `Trabajar sin permiso de trabajo` },
-      { path: 'sm', name: `Sanción empleador natural` },
-      { path: 'sj', name: `Sanción para empleador juridico`}
+      { path: 'rsi', name: `Retraso en solicitar cédula de identidad` },
+      { path: 'exr', name: `Quedarse en Chile con el permiso de residencia o permanencia expirado por 180 días o menos` },
+      { path: 'cdn', name: `Incumplimiento de la obligación de informar cambio de domicilio.` },
+      { path: 'rsa', name: `Desarrollo de actividades remuneradas sin autorización`},
+      { path: 'tzf', name: `Transgresión de la Zona Fronteriza`},
+      { path: 'scm', name: `Salir del país sin realizar control migratorio`},
+      { path: 'ex1', name: `Empleo de extranjeros sin autorización: Micro empresa`},
+      { path: 'ex2', name: `Empleo de extranjeros sin autorización: Pequeña empresa`},
+      { path: 'ex3', name: `Empleo de extranjeros sin autorización: Mediana empresa`},
+      { path: 'ex4', name: `Empleo de extranjeros sin autorización: Gran empresa`},
+      { path: 'asa', name: `Arrendamiento o subarrendamiento abusivo`},
+      { path: 'qre', name: `Quedarse en Chile con el permiso de residencia o permanencia expirado por 180 días o más`}
     ];
 
     	function select_change_handler() {
@@ -8771,33 +10299,33 @@
     class Ss extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$7, create_fragment$c, safe_not_equal, []);
-    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Ss", options, id: create_fragment$c.name });
+    		init(this, options, instance$7, create_fragment$k, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Ss", options, id: create_fragment$k.name });
     	}
     }
 
     var View5 = [
     	{
     		tramite: "Residencia Definitiva",
-    		clp: 76666
+    		clp: 105713
     	},
     	{
     		tramite: "Opción de nacionalidad",
-    		clp: 21626
+    		clp: 29436
     	},
     	{
     		tramite: "Nacionalidad general",
-    		clp: 21626
+    		clp: 29436
     	},
     	{
     		tramite: "Nacionalidad por vínculo con chileno (esposo/a por ley vivo o muerto hijo/a chileno/a)",
-    		clp: 4138
+    		clp: 5887
     	}
     ];
 
     /* src/pages/Nc.svelte generated by Svelte v3.12.1 */
 
-    const file$c = "src/pages/Nc.svelte";
+    const file$k = "src/pages/Nc.svelte";
 
     function get_each_context$5(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
@@ -8820,11 +10348,11 @@
     			t3 = text(t3_value);
     			t4 = space();
     			attr_dev(td0, "class", "border px-4 py-2");
-    			add_location(td0, file$c, 24, 6, 761);
+    			add_location(td0, file$k, 24, 6, 761);
     			attr_dev(td1, "class", "border px-4 py-2");
-    			add_location(td1, file$c, 25, 6, 815);
+    			add_location(td1, file$k, 25, 6, 815);
     			attr_dev(tr, "class", "bg-white");
-    			add_location(tr, file$c, 23, 4, 733);
+    			add_location(tr, file$k, 23, 4, 733);
     		},
 
     		m: function mount(target, anchor) {
@@ -8850,7 +10378,7 @@
     	return block;
     }
 
-    function create_fragment$d(ctx) {
+    function create_fragment$l(ctx) {
     	var div2, div1, h2, t1, div0, t2, table, thead, tr, th0, t4, th1, t6, tbody;
 
     	let each_value = View5;
@@ -8884,22 +10412,22 @@
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			add_location(h2, file$c, 11, 2, 272);
+    			add_location(h2, file$k, 11, 2, 272);
     			attr_dev(div0, "class", "inline-block relative w-full mt-4");
-    			add_location(div0, file$c, 12, 4, 314);
+    			add_location(div0, file$k, 12, 4, 314);
     			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th0, file$c, 17, 6, 436);
+    			add_location(th0, file$k, 17, 6, 436);
     			attr_dev(th1, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th1, file$c, 18, 6, 554);
-    			add_location(tr, file$c, 16, 4, 425);
-    			add_location(thead, file$c, 15, 2, 413);
-    			add_location(tbody, file$c, 21, 2, 696);
+    			add_location(th1, file$k, 18, 6, 554);
+    			add_location(tr, file$k, 16, 4, 425);
+    			add_location(thead, file$k, 15, 2, 413);
+    			add_location(tbody, file$k, 21, 2, 696);
     			attr_dev(table, "class", "table-fixed my-6 w-full");
-    			add_location(table, file$c, 14, 0, 371);
+    			add_location(table, file$k, 14, 0, 371);
     			attr_dev(div1, "class", "w-2/3 mt-20");
-    			add_location(div1, file$c, 10, 2, 244);
+    			add_location(div1, file$k, 10, 2, 244);
     			attr_dev(div2, "class", "container mx-auto h-full flex justify-center items-center");
-    			add_location(div2, file$c, 9, 0, 170);
+    			add_location(div2, file$k, 9, 0, 170);
     		},
 
     		l: function claim(nodes) {
@@ -8962,274 +10490,15 @@
     			destroy_each(each_blocks, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$d.name, type: "component", source: "", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$l.name, type: "component", source: "", ctx });
     	return block;
     }
 
     class Nc extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, null, create_fragment$d, safe_not_equal, []);
-    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Nc", options, id: create_fragment$d.name });
-    	}
-    }
-
-    var View4 = [
-    	{
-    		tramite: "Constancia por pérdida de documento",
-    		usd: 0.69
-    	},
-    	{
-    		tramite: "Certificado de registro de viaje",
-    		usd: 1.1
-    	},
-    	{
-    		tramite: "Certificado de vigencia de la permanencia",
-    		usd: 1.1
-    	},
-    	{
-    		tramite: "Salvo conducto",
-    		usd: 1.1
-    	},
-    	{
-    		tramite: "Duplicado de tarjeta de turismo",
-    		usd: 0
-    	},
-    	{
-    		tramite: "Duplicado de permanencia definitiva",
-    		usd: 1.1
-    	},
-    	{
-    		tramite: "Certificado de residencia y domicilio",
-    		usd: 1.1
-    	},
-    	{
-    		tramite: "Certificado de registro",
-    		usd: 1.1
-    	}
-    ];
-
-    /* src/pages/Pd.svelte generated by Svelte v3.12.1 */
-
-    const file$d = "src/pages/Pd.svelte";
-
-    function get_each_context$6(ctx, list, i) {
-    	const child_ctx = Object.create(ctx);
-    	child_ctx.dss = list[i];
-    	return child_ctx;
-    }
-
-    // (35:4) {#each View4 as dss}
-    function create_each_block$6(ctx) {
-    	var tr, td0, t0_value = ctx.dss.tramite + "", t0, t1, td1, t2, t3_value = ctx.dss ? ctx.dss.usd : '[waiting...]' + "", t3, t4, td2, t5, t6_value = ctx.dss ? format(Math.round((ctx.dss.usd*ctx.price_dollar))) : '[waiting...]' + "", t6, t7;
-
-    	const block = {
-    		c: function create() {
-    			tr = element("tr");
-    			td0 = element("td");
-    			t0 = text(t0_value);
-    			t1 = space();
-    			td1 = element("td");
-    			t2 = text("US$ ");
-    			t3 = text(t3_value);
-    			t4 = space();
-    			td2 = element("td");
-    			t5 = text("$ ");
-    			t6 = text(t6_value);
-    			t7 = space();
-    			attr_dev(td0, "class", "border px-4 py-2");
-    			add_location(td0, file$d, 36, 6, 1104);
-    			attr_dev(td1, "class", "border px-4 py-2");
-    			add_location(td1, file$d, 37, 6, 1158);
-    			attr_dev(td2, "class", "border px-4 py-2");
-    			add_location(td2, file$d, 38, 6, 1235);
-    			attr_dev(tr, "class", "bg-white");
-    			add_location(tr, file$d, 35, 4, 1076);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert_dev(target, tr, anchor);
-    			append_dev(tr, td0);
-    			append_dev(td0, t0);
-    			append_dev(tr, t1);
-    			append_dev(tr, td1);
-    			append_dev(td1, t2);
-    			append_dev(td1, t3);
-    			append_dev(tr, t4);
-    			append_dev(tr, td2);
-    			append_dev(td2, t5);
-    			append_dev(td2, t6);
-    			append_dev(tr, t7);
-    		},
-
-    		p: function update(changed, ctx) {
-    			if ((changed.price_dollar) && t6_value !== (t6_value = ctx.dss ? format(Math.round((ctx.dss.usd*ctx.price_dollar))) : '[waiting...]' + "")) {
-    				set_data_dev(t6, t6_value);
-    			}
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach_dev(tr);
-    			}
-    		}
-    	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$6.name, type: "each", source: "(35:4) {#each View4 as dss}", ctx });
-    	return block;
-    }
-
-    function create_fragment$e(ctx) {
-    	var div2, div1, h2, t1, div0, t2, table, thead, tr, th0, t4, th1, t6, th2, t8, tbody;
-
-    	let each_value = View4;
-
-    	let each_blocks = [];
-
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$6(get_each_context$6(ctx, each_value, i));
-    	}
-
-    	const block = {
-    		c: function create() {
-    			div2 = element("div");
-    			div1 = element("div");
-    			h2 = element("h2");
-    			h2.textContent = "Valores de trámites y documentos PDI";
-    			t1 = space();
-    			div0 = element("div");
-    			t2 = space();
-    			table = element("table");
-    			thead = element("thead");
-    			tr = element("tr");
-    			th0 = element("th");
-    			th0.textContent = "Trámite";
-    			t4 = space();
-    			th1 = element("th");
-    			th1.textContent = "Dolares";
-    			t6 = space();
-    			th2 = element("th");
-    			th2.textContent = "Pesos chilenos";
-    			t8 = space();
-    			tbody = element("tbody");
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
-    			}
-    			add_location(h2, file$d, 22, 2, 489);
-    			attr_dev(div0, "class", "inline-block relative w-full mt-4");
-    			add_location(div0, file$d, 23, 4, 539);
-    			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th0, file$d, 28, 6, 661);
-    			attr_dev(th1, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th1, file$d, 29, 6, 779);
-    			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th2, file$d, 30, 6, 897);
-    			add_location(tr, file$d, 27, 4, 650);
-    			add_location(thead, file$d, 26, 2, 638);
-    			add_location(tbody, file$d, 33, 2, 1039);
-    			attr_dev(table, "class", "table-fixed my-6 w-full");
-    			add_location(table, file$d, 25, 0, 596);
-    			attr_dev(div1, "class", "w-2/3 mt-20");
-    			add_location(div1, file$d, 21, 2, 461);
-    			attr_dev(div2, "class", "container mx-auto flex justify-center items-center");
-    			add_location(div2, file$d, 20, 0, 394);
-    		},
-
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, div1);
-    			append_dev(div1, h2);
-    			append_dev(div1, t1);
-    			append_dev(div1, div0);
-    			append_dev(div1, t2);
-    			append_dev(div1, table);
-    			append_dev(table, thead);
-    			append_dev(thead, tr);
-    			append_dev(tr, th0);
-    			append_dev(tr, t4);
-    			append_dev(tr, th1);
-    			append_dev(tr, t6);
-    			append_dev(tr, th2);
-    			append_dev(table, t8);
-    			append_dev(table, tbody);
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(tbody, null);
-    			}
-    		},
-
-    		p: function update(changed, ctx) {
-    			if (changed.View4 || changed.format || changed.price_dollar) {
-    				each_value = View4;
-
-    				let i;
-    				for (i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$6(ctx, each_value, i);
-
-    					if (each_blocks[i]) {
-    						each_blocks[i].p(changed, child_ctx);
-    					} else {
-    						each_blocks[i] = create_each_block$6(child_ctx);
-    						each_blocks[i].c();
-    						each_blocks[i].m(tbody, null);
-    					}
-    				}
-
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-    				each_blocks.length = each_value.length;
-    			}
-    		},
-
-    		i: noop,
-    		o: noop,
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach_dev(div2);
-    			}
-
-    			destroy_each(each_blocks, detaching);
-    		}
-    	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$e.name, type: "component", source: "", ctx });
-    	return block;
-    }
-
-    function instance$8($$self, $$props, $$invalidate) {
-    	
-
-    let price_dollar;
-
-    onMount(async () => {
-        await fetch(`https://mindicador.cl/api`)
-          .then(r => r.json())
-          .then(data => {
-            $$invalidate('price_dollar', price_dollar = data.dolar.valor);
-          });
-    });
-
-    	$$self.$capture_state = () => {
-    		return {};
-    	};
-
-    	$$self.$inject_state = $$props => {
-    		if ('price_dollar' in $$props) $$invalidate('price_dollar', price_dollar = $$props.price_dollar);
-    	};
-
-    	return { price_dollar };
-    }
-
-    class Pd extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$8, create_fragment$e, safe_not_equal, []);
-    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Pd", options, id: create_fragment$e.name });
+    		init(this, options, null, create_fragment$l, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Nc", options, id: create_fragment$l.name });
     	}
     }
 
@@ -9254,16 +10523,16 @@
 
     /* src/pages/Rc.svelte generated by Svelte v3.12.1 */
 
-    const file$e = "src/pages/Rc.svelte";
+    const file$l = "src/pages/Rc.svelte";
 
-    function get_each_context$7(ctx, list, i) {
+    function get_each_context$6(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
     	child_ctx.dss = list[i];
     	return child_ctx;
     }
 
     // (36:4) {#each View5 as dss}
-    function create_each_block$7(ctx) {
+    function create_each_block$6(ctx) {
     	var tr, td0, t0_value = ctx.dss.tramite + "", t0, t1, td1, t2, t3_value = ctx.dss ? ctx.dss.usd : '[waiting...]' + "", t3, t4, td2, t5, t6_value = ctx.dss ? format(Math.round((ctx.dss.usd*ctx.price_dollar))) : '[waiting...]' + "", t6, t7;
 
     	const block = {
@@ -9281,13 +10550,13 @@
     			t6 = text(t6_value);
     			t7 = space();
     			attr_dev(td0, "class", "border px-4 py-2");
-    			add_location(td0, file$e, 37, 6, 1131);
+    			add_location(td0, file$l, 37, 6, 1131);
     			attr_dev(td1, "class", "border px-4 py-2");
-    			add_location(td1, file$e, 38, 6, 1185);
+    			add_location(td1, file$l, 38, 6, 1185);
     			attr_dev(td2, "class", "border px-4 py-2");
-    			add_location(td2, file$e, 39, 6, 1262);
+    			add_location(td2, file$l, 39, 6, 1262);
     			attr_dev(tr, "class", "bg-white");
-    			add_location(tr, file$e, 36, 4, 1103);
+    			add_location(tr, file$l, 36, 4, 1103);
     		},
 
     		m: function mount(target, anchor) {
@@ -9317,11 +10586,11 @@
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$7.name, type: "each", source: "(36:4) {#each View5 as dss}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$6.name, type: "each", source: "(36:4) {#each View5 as dss}", ctx });
     	return block;
     }
 
-    function create_fragment$f(ctx) {
+    function create_fragment$m(ctx) {
     	var div2, div1, h2, t1, div0, t2, table, thead, tr, th0, t4, th1, t6, th2, t8, tbody;
 
     	let each_value = View5$1;
@@ -9329,7 +10598,7 @@
     	let each_blocks = [];
 
     	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$7(get_each_context$7(ctx, each_value, i));
+    		each_blocks[i] = create_each_block$6(get_each_context$6(ctx, each_value, i));
     	}
 
     	const block = {
@@ -9358,24 +10627,24 @@
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			add_location(h2, file$e, 23, 2, 497);
+    			add_location(h2, file$l, 23, 2, 497);
     			attr_dev(div0, "class", "inline-block relative w-full mt-4");
-    			add_location(div0, file$e, 24, 4, 566);
+    			add_location(div0, file$l, 24, 4, 566);
     			attr_dev(th0, "class", "w-2/3 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th0, file$e, 29, 6, 688);
+    			add_location(th0, file$l, 29, 6, 688);
     			attr_dev(th1, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th1, file$e, 30, 6, 806);
+    			add_location(th1, file$l, 30, 6, 806);
     			attr_dev(th2, "class", "w-1/2 px-4 py-2 text-left uppercase tracking-wide text-gray-100 text-xs font-bold mb-2");
-    			add_location(th2, file$e, 31, 6, 924);
-    			add_location(tr, file$e, 28, 4, 677);
-    			add_location(thead, file$e, 27, 2, 665);
-    			add_location(tbody, file$e, 34, 2, 1066);
+    			add_location(th2, file$l, 31, 6, 924);
+    			add_location(tr, file$l, 28, 4, 677);
+    			add_location(thead, file$l, 27, 2, 665);
+    			add_location(tbody, file$l, 34, 2, 1066);
     			attr_dev(table, "class", "table-fixed my-6 w-full");
-    			add_location(table, file$e, 26, 0, 623);
+    			add_location(table, file$l, 26, 0, 623);
     			attr_dev(div1, "class", "w-2/3 mt-20");
-    			add_location(div1, file$e, 22, 2, 469);
+    			add_location(div1, file$l, 22, 2, 469);
     			attr_dev(div2, "class", "container mx-auto h-full flex justify-center items-center");
-    			add_location(div2, file$e, 21, 0, 395);
+    			add_location(div2, file$l, 21, 0, 395);
     		},
 
     		l: function claim(nodes) {
@@ -9411,12 +10680,12 @@
 
     				let i;
     				for (i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$7(ctx, each_value, i);
+    					const child_ctx = get_each_context$6(ctx, each_value, i);
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(changed, child_ctx);
     					} else {
-    						each_blocks[i] = create_each_block$7(child_ctx);
+    						each_blocks[i] = create_each_block$6(child_ctx);
     						each_blocks[i].c();
     						each_blocks[i].m(tbody, null);
     					}
@@ -9440,11 +10709,11 @@
     			destroy_each(each_blocks, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$f.name, type: "component", source: "", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$m.name, type: "component", source: "", ctx });
     	return block;
     }
 
-    function instance$9($$self, $$props, $$invalidate) {
+    function instance$8($$self, $$props, $$invalidate) {
     	
 
     let price_dollar;
@@ -9471,16 +10740,16 @@
     class Rc extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$9, create_fragment$f, safe_not_equal, []);
-    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Rc", options, id: create_fragment$f.name });
+    		init(this, options, instance$8, create_fragment$m, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Rc", options, id: create_fragment$m.name });
     	}
     }
 
     /* src/App.svelte generated by Svelte v3.12.1 */
 
-    // (21:0) <Router>
+    // (20:0) <Router>
     function create_default_slot$1(ctx) {
-    	var t0, t1, t2, t3, t4, t5, t6, t7, current;
+    	var t0, t1, t2, t3, t4, t5, t6, current;
 
     	var route0 = new Route({
     		props: { path: "*", component: Home },
@@ -9544,15 +10813,6 @@
     	var route7 = new Route({
     		props: {
     		exact: true,
-    		path: "/pd",
-    		component: Pd
-    	},
-    		$$inline: true
-    	});
-
-    	var route8 = new Route({
-    		props: {
-    		exact: true,
     		path: "/rc",
     		component: Rc
     	},
@@ -9576,8 +10836,6 @@
     			route6.$$.fragment.c();
     			t6 = space();
     			route7.$$.fragment.c();
-    			t7 = space();
-    			route8.$$.fragment.c();
     		},
 
     		m: function mount(target, anchor) {
@@ -9596,8 +10854,6 @@
     			mount_component(route6, target, anchor);
     			insert_dev(target, t6, anchor);
     			mount_component(route7, target, anchor);
-    			insert_dev(target, t7, anchor);
-    			mount_component(route8, target, anchor);
     			current = true;
     		},
 
@@ -9621,8 +10877,6 @@
 
     			transition_in(route7.$$.fragment, local);
 
-    			transition_in(route8.$$.fragment, local);
-
     			current = true;
     		},
 
@@ -9635,7 +10889,6 @@
     			transition_out(route5.$$.fragment, local);
     			transition_out(route6.$$.fragment, local);
     			transition_out(route7.$$.fragment, local);
-    			transition_out(route8.$$.fragment, local);
     			current = false;
     		},
 
@@ -9683,19 +10936,13 @@
     			}
 
     			destroy_component(route7, detaching);
-
-    			if (detaching) {
-    				detach_dev(t7);
-    			}
-
-    			destroy_component(route8, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$1.name, type: "slot", source: "(21:0) <Router>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$1.name, type: "slot", source: "(20:0) <Router>", ctx });
     	return block;
     }
 
-    function create_fragment$g(ctx) {
+    function create_fragment$n(ctx) {
     	var t, current;
 
     	var nav = new Nav({ $$inline: true });
@@ -9757,15 +11004,15 @@
     			destroy_component(router, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$g.name, type: "component", source: "", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$n.name, type: "component", source: "", ctx });
     	return block;
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, null, create_fragment$g, safe_not_equal, []);
-    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "App", options, id: create_fragment$g.name });
+    		init(this, options, null, create_fragment$n, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "App", options, id: create_fragment$n.name });
     	}
     }
 
