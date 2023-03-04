@@ -1,5 +1,15 @@
 <script>
-
+  import { onMount } from "svelte";
+  
+  let price_utm;
+  
+  onMount(async () => {
+      await fetch(`https://mindicador.cl/api`)
+        .then(r => r.json())
+        .then(data => {
+          price_utm = data.utm.valor;
+        });
+  })
 </script>
 
 <table class="table-fixed my-6 w-full">
@@ -17,18 +27,18 @@
     <tr class="bg-white">
       <td class="border px-4 py-2">Tramo 1</td>
       <td class="border px-4 py-2">Antes de 5 días</td>
-      <td class="border px-4 py-2">15</td>
-      <td class="border px-4 py-2">22.5</td>
-      <td class="border px-4 py-2">50</td>
-      <td class="border px-4 py-2">75</td>
+      <td class="border px-4 py-2">{isNaN(price_utm) ? '...waiting' : '$ ' + Math.round((15*price_utm)).toLocaleString('es-CL')}</td>
+      <td class="border px-4 py-2">{isNaN(price_utm) ? '...waiting' : '$ ' + Math.round((22.5*price_utm)).toLocaleString('es-CL')}</td>
+      <td class="border px-4 py-2">{isNaN(price_utm) ? '...waiting' : '$ ' + Math.round((50*price_utm)).toLocaleString('es-CL')}</td>
+      <td class="border px-4 py-2">{isNaN(price_utm) ? '...waiting' : '$ ' + Math.round((75*price_utm)).toLocaleString('es-CL')}</td>
     </tr>
     <tr class="bg-gray-100">
       <td class="border px-4 py-2">Tramo 2</td>
       <td class="border px-4 py-2">Despúes de 5 días</td>
-      <td class="border px-4 py-2">15</td>
-      <td class="border px-4 py-2">30</td>
-      <td class="border px-4 py-2">50</td>
-      <td class="border px-4 py-2">100</td>
+      <td class="border px-4 py-2">{isNaN(price_utm) ? '...waiting' : '$ ' + Math.round((15*price_utm)).toLocaleString('es-CL')}</td>
+      <td class="border px-4 py-2">{isNaN(price_utm) ? '...waiting' : '$ ' + Math.round((30*price_utm)).toLocaleString('es-CL')}</td>
+      <td class="border px-4 py-2">{isNaN(price_utm) ? '...waiting' : '$ ' + Math.round((50*price_utm)).toLocaleString('es-CL')}</td>
+      <td class="border px-4 py-2">{isNaN(price_utm) ? '...waiting' : '$ ' + Math.round((100*price_utm)).toLocaleString('es-CL')}</td>
     </tr>
   </tbody>
 </table>
